@@ -1,8 +1,253 @@
-@import 'core/reset';
-@import 'core/variables';
-@import 'components/header';
-@import 'components/footer';
-@import 'layout/main';
-@import 'core/helpers';
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}/* HTML5 display-role reset for older browsers */article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  display: block;
+}
+
+body {
+  line-height: 1rem;
+}
+
+ol,ul {
+  list-style: none;
+}
+
+blockquote,q {
+  quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.background {
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 30px;
+  height: 100vh;
+  overflow: hidden;
+ /* NIGHT */
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#273c75), to(#353b48));
+  background-image: linear-gradient(to top, #273c75, #353b48);
+  background-size: 60%;
+}
+
+.hills {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50vh;
+  width: 100vw;
+}
+
+.cloud {
+  z-index: 2;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 30vh;
+  min-width: 160px;
+  max-width: 280px;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  visibility: hidden;
+}
+
+.sun {
+  z-index: 0;
+  position: absolute;
+  top: 700px;
+  left: 25%;
+  width: 60%;
+  min-width: 160px;
+  max-width: 280px;
+}
+
+.rain {
+  z-index: 3;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://i.gifer.com/3BBK.gif");
+  background-repeat: round;
+}
+
+.button {
+  margin-right: 500px;
+  width: 100px;
+  background: lightgray;
+  border: 1px solid;
+  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grass {
+  z-index: 3;
+  position: absolute;
+  bottom: -15px;
+  left: -40px;
+  display: block;
+  width: 120vw;
+  height: 35%;
+}
+
+.flower {
+  z-index: 2;
+  width: 200px;
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+ /* visibility: hidden; */;
+}
+
+.sun--rise {
+  -webkit-animation-name: sunrise;
+  animation-name: sunrise;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.sun--set {
+  -webkit-animation-name: sunset;
+  animation-name: sunset;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.flower--animate {
+  -webkit-animation-name: bloom;
+  animation-name: bloom;
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.background {
+  -webkit-transition: background-image 10s ease-in , background-color 10s ease-in;
+  transition: background-image 10s ease-in , background-color 10s ease-in;
+}
+
+.background.day {
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 0, 0.3)), to(rgba(0, 168, 255, 0.5)));
+  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(0, 168, 255, 0.5));
+  background-color: white;
+}
+
+.background.twilight {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#201a36), to(#18132d));
+  background-image: linear-gradient(to top, #201a36, #18132d);
+  background-color: #273c75;
+}
+
+.background.night {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(39, 60, 117, 0.4)), to(rgba(53, 59, 72, 0.4))), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
+  background-image: linear-gradient(to top, rgba(39, 60, 117, 0.4), rgba(53, 59, 72, 0.4)), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
+}
+
+@-webkit-keyframes sunrise {
+  from {
+    top: 600px;
+ /* transform: translate(0, -200px); */;
+  }
+
+  to {
+    top: 10%;
+  }
+}
+
+@keyframes sunrise {
+  from {
+    top: 600px;
+ /* transform: translate(0, -200px); */;
+  }
+
+  to {
+    top: 10%;
+  }
+}
+
+@-webkit-keyframes sunset {
+  from {
+    top: 10%;
+ /* transform: translate(0, -200px); */;
+  }
+
+  to {
+    top: -200%;
+  }
+}
+
+@keyframes sunset {
+  from {
+    top: 10%;
+ /* transform: translate(0, -200px); */;
+  }
+
+  to {
+    top: -200%;
+  }
+}
+
+@-webkit-keyframes bloom {
+  from {
+    bottom: -200px;
+  }
+
+  to {
+    bottom: 18%;
+  }
+}
+
+@keyframes bloom {
+  from {
+    bottom: -200px;
+  }
+
+  to {
+    bottom: 18%;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,77 @@
+.sun--rise {
+  animation-name: sunrise;
+animation-duration: 5s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+animation-timing-function: ease-out;
+}
+
+@keyframes sunrise {
+  from {
+    top: 600px;
+    /* transform: translate(0, -200px); */
+  }
+  to {
+    top: 10%;
+  }
+}
+
+.sun--set {
+  animation-name: sunset;
+animation-duration: 5s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+animation-timing-function: ease-in;
+}
+
+@keyframes sunset {
+  from {
+    top: 10%;
+    /* transform: translate(0, -200px); */
+  }
+  to {
+    top: -200%;
+  }
+}
+
+.flower--animate {
+  animation-name: bloom;
+animation-duration: 8s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+
+}
+
+@keyframes bloom {
+  from {
+    bottom: -200px;
+  }
+  to {
+      bottom: 18%;
+  }
+}
+
+.background {
+  transition: background-image 10s ease-in , background-color 10s ease-in;
+
+&.day {
+  background-size: 100%;
+  background-image: linear-gradient(to top, rgba(255,255,0,0.3), rgba(0, 168, 255,0.5));
+  background-color: white;
+}
+
+&.twilight {
+
+  background-image: linear-gradient(to top, rgb(32, 26, 54), rgb(24, 19, 45));
+  background-color: rgba(39, 60, 117, 1);
+}
+
+&.night {
+  background-image: linear-gradient(to top, rgba(39, 60, 117, 0.4), rgba(53, 59, 72,0.4)), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
+}
+
+}
+
+.clouds {
+
+}
