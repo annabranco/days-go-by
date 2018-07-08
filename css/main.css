@@ -36,6 +36,7 @@ table {
 
 body {
   margin: 0;
+  height: 100vh;
 }
 
 .sky {
@@ -44,7 +45,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   padding-top: 30px;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   -webkit-transition: background-image 10s ease-in , background-color 10s ease-in;
   transition: background-image 10s ease-in , background-color 10s ease-in;
@@ -653,10 +654,10 @@ body {
   z-index: 10;
   position: absolute;
   right: 5px;
-  top: 5px;
+  bottom: 8%;
   display: grid;
-  grid-template-columns: repeat(2, 70px);
-  grid-gap: 5px;
+  grid-template-columns: repeat(2, 80px);
+  grid-gap: 2px;
 }
 
 .teste-buttom {
@@ -665,7 +666,7 @@ body {
   cursor: pointer;
 }
 
-.teste01,.teste08 {
+.teste01,.teste05,.teste09 {
   grid-column: span 2;
 }
 
@@ -674,7 +675,7 @@ body {
     z-index: 10;
     position: absolute;
     right: 5px;
-    top: 5px;
+    bottom: 8%;
     display: grid;
     grid-template-columns: repeat(5, 80px);
     grid-gap: 5px;

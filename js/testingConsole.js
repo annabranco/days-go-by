@@ -167,10 +167,8 @@ function addCloudsHigh() {
   cloudsHigh.classList.toggle('teste');
   if (cloudsHigh.style.display === 'block') {
     cloudsHigh.style.display = 'none';
-    testeConsole.style.top = '5px';
   } else {
     cloudsHigh.style.display = 'block';
-    testeConsole.style.top = '50px';
 
   }
 }

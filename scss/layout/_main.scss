@@ -1,12 +1,13 @@
 body {
   margin: 0;
+  height: 100vh;
 }
 
 .sky {
   position   : relative;
   align-items: center;
   padding-top: 30px;
-  height     : 100vh;
+  height     : 100%;
   overflow   : hidden;
   transition : background-image 10s ease-in , background-color 10s ease-in;
 }
