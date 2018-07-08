@@ -58,7 +58,7 @@
   z-index              : 10;
   position             : absolute;
   right                : 5px;
-  bottom               : 8%;
+  bottom               : 15%;
   display              : grid;
   grid-template-columns: repeat(2, 80px);
   grid-gap             : 2px;
@@ -68,7 +68,7 @@
     z-index              : 10;
     position             : absolute;
     right                : 5px;
-    bottom               : 8%;
+    bottom               : 10%;
     display              : grid;
     grid-template-columns: repeat(5, 80px);
     grid-gap             : 5px;
