@@ -1,0 +1,177 @@
+.neutral {
+  &.sky {
+    background-image: linear-gradient(to top, rgba(39, 60, 117, 1), rgba(53, 59, 72,1));
+    background-size: 60%;
+  }
+  &.hills {
+  }
+  &.grass {
+  }
+  &.flower {
+  }
+  &.cloud {
+  }
+  &.cloudsHigh {
+  }
+}
+
+.day {
+  &.sky {
+    background-size: 100%;
+    background-image: linear-gradient(to top, rgba(255,255,0,0.3), rgba(0, 168, 255,0.5));
+    background-color: white;
+    &.clouds{
+      background-image: linear-gradient(to top, rgba(79, 109, 189, 1), rgba(80, 91, 115, 1));
+    }
+    &.moreclouds{
+      background-image: linear-gradient(to top, rgba(39, 60, 117, 1), rgba(53, 59, 72,1));
+    }
+    &.itrains{
+      background-image: linear-gradient(to top, rgba(53, 59, 72,0.7), rgba(53, 59, 72,1));
+      background-color: rgba(39, 60, 117, 1);
+    }
+  }
+  &.hills {
+    filter: saturate(100%) brightness(100%);
+    &.clouds{
+      filter: saturate(90%) brightness(90%);
+    }
+    &.moreclouds{
+      filter: saturate(80%) brightness(80%);
+    }
+    &.itrains{
+      filter: saturate(70%) brightness(70%);
+    }
+  }
+  &.grass {
+    filter: saturate(100%) brightness(100%);
+    &.clouds{
+      filter: saturate(90%) brightness(90%);
+    }
+    &.moreclouds{
+      filter: saturate(80%) brightness(80%);
+    }
+    &.itrains{
+      filter: saturate(70%) brightness(70%);
+    }
+  }
+  &.flower {
+    filter: saturate(100%) brightness(100%);
+    &.clouds{
+      filter: saturate(90%) brightness(90%);
+    }
+    &.moreclouds{
+      filter: saturate(80%) brightness(80%);
+    }
+    &.itrains{
+      filter: saturate(70%) brightness(70%);
+    }
+  }
+  &.cloud {
+    &.clouds{
+      filter: saturate(90%) brightness(90%);
+  }
+  &.cloudsHigh {
+    &.moreclouds{
+      filter: saturate(80%) brightness(80%);
+    }
+    &.itrains{
+      filter: saturate(70%) brightness(70%);
+    }
+}
+
+.twilight {
+  &.sky {
+    background-image: linear-gradient(to top, rgba(46, 71, 139, 1), rgba(24, 24, 43, 1));
+    &.clouds{
+      background-image: linear-gradient(to top, rgba(70, 80, 106, 1), rgba(33, 33, 40, 1));
+    }
+    &.moreclouds{
+      background-image: linear-gradient(to top, rgba(70, 80, 106, 1), rgba(31, 31, 36, 1));
+    }
+    &.itrains{
+      background-image: linear-gradient(to top, rgba(70, 80, 106, 1), rgba(27, 27, 29, 1));
+    }
+  }
+  &.hills {
+    filter: saturate(90%) brightness(70%);
+    &.clouds{
+      filter: saturate(80%) brightness(60%);
+    }
+    &.moreclouds{
+      filter: saturate(70%) brightness(50%);
+    }
+    &.itrains{
+      filter: saturate(60%) brightness(40%);
+    }
+  }
+  &.grass {
+    &.clouds{
+    }
+    &.moreclouds{
+    }
+    &.itrains{
+    }
+  }
+  &.flower {
+    &.clouds{
+    }
+    &.moreclouds{
+    }
+    &.itrains{
+    }
+  }
+  &.cloud {
+  }
+  &.cloudsHigh {
+  }
+}
+
+.night {
+  &.sky {
+    background-image: linear-gradient(to top, rgba(32, 26, 54,0.6), rgba(12, 12, 14, 0.7)), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
+    background-size: 70%;
+
+    &.clouds{
+      background-image: linear-gradient(to top, rgba(32, 26, 54,0.85), rgba(22, 22, 22, 1)), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
+      background-size: 70%;
+    }
+    &.moreclouds{
+      background-image: linear-gradient(to top, rgba(38, 36, 48, 1), rgba(14, 14, 14, 1));
+    }
+    &.itrains{
+      background-image: linear-gradient(to top, rgba(44, 44, 45, 1), rgba(0, 0, 0, 1));    }
+    }
+    &.hills {
+      filter: saturate(90%) brightness(90%);
+      &.clouds{
+        filter: saturate(50%) brightness(30%);
+      }
+      &.moreclouds{
+        filter: saturate(40%) brightness(20%);
+      }
+      &.itrains{
+        filter: saturate(30%) brightness(10%);
+      }
+    }
+    &.grass {
+      &.clouds{
+      }
+      &.moreclouds{
+      }
+      &.itrains{
+      }
+    }
+    &.flower {
+      &.clouds{
+      }
+      &.moreclouds{
+      }
+      &.itrains{
+      }
+    }
+    &.cloud {
+    }
+    &.cloudsHigh {
+    }
+  }

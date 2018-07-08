@@ -38,7 +38,7 @@ body {
   margin: 0;
 }
 
-.background {
+.sky {
   position: relative;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -46,10 +46,8 @@ body {
   padding-top: 30px;
   height: 100vh;
   overflow: hidden;
- /* NIGHT */
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#273c75), to(#353b48));
-  background-image: linear-gradient(to top, #273c75, #353b48);
-  background-size: 60%;
+  -webkit-transition: background-image 10s ease-in , background-color 10s ease-in;
+  transition: background-image 10s ease-in , background-color 10s ease-in;
 }
 
 .hills {
@@ -59,6 +57,22 @@ body {
   left: 0;
   height: 50vh;
   width: 100vw;
+}
+
+.clouds-high {
+  z-index: 4;
+  position: absolute;
+  top: -50px;
+  height: 57px;
+  width: 100vw;
+  background-image: url("../images/cloudsTop.png");
+  background-repeat: round no-repeat;
+  background-size: 20%;
+  display: none;
+}
+
+.clouds-high.teste {
+  top: -20px;
 }
 
 .cloud {
@@ -71,7 +85,7 @@ body {
   max-width: 280px;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  visibility: hidden;
+  display: none;
 }
 
 .sun {
@@ -82,15 +96,25 @@ body {
   width: 60%;
   min-width: 160px;
   max-width: 280px;
+  display: none;
+}
+
+.sun.teste {
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 
 .rain {
   z-index: 3;
   position: absolute;
+  top: 0;
   height: 100vh;
   width: 100vw;
   background-image: url("https://i.gifer.com/3BBK.gif");
   background-repeat: round;
+  display: none;
 }
 
 .button {
@@ -123,7 +147,142 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
- /* visibility: hidden; */;
+  display: none;
+}
+
+.flower.teste {
+  bottom: 110px;
+}
+
+.neutral.sky {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#273c75), to(#353b48));
+  background-image: linear-gradient(to top, #273c75, #353b48);
+  background-size: 60%;
+}
+
+.day.sky {
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 0, 0.3)), to(rgba(0, 168, 255, 0.5)));
+  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(0, 168, 255, 0.5));
+  background-color: white;
+}
+
+.day.sky.clouds {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#4f6dbd), to(#505b73));
+  background-image: linear-gradient(to top, #4f6dbd, #505b73);
+}
+
+.day.sky.moreclouds {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#273c75), to(#353b48));
+  background-image: linear-gradient(to top, #273c75, #353b48);
+}
+
+.day.sky.itrains {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(53, 59, 72, 0.7)), to(#353b48));
+  background-image: linear-gradient(to top, rgba(53, 59, 72, 0.7), #353b48);
+  background-color: #273c75;
+}
+
+.day.hills {
+  -webkit-filter: saturate(100%) brightness(100%);
+  filter: saturate(100%) brightness(100%);
+}
+
+.day.hills.clouds {
+  -webkit-filter: saturate(90%) brightness(90%);
+  filter: saturate(90%) brightness(90%);
+}
+
+.day.hills.moreclouds {
+  -webkit-filter: saturate(80%) brightness(80%);
+  filter: saturate(80%) brightness(80%);
+}
+
+.day.hills.itrains {
+  -webkit-filter: saturate(70%) brightness(70%);
+  filter: saturate(70%) brightness(70%);
+}
+
+.twilight.sky {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#2e478b), to(#18182b));
+  background-image: linear-gradient(to top, #2e478b, #18182b);
+}
+
+.twilight.sky.clouds {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#46506a), to(#212128));
+  background-image: linear-gradient(to top, #46506a, #212128);
+}
+
+.twilight.sky.moreclouds {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#46506a), to(#1f1f24));
+  background-image: linear-gradient(to top, #46506a, #1f1f24);
+}
+
+.twilight.sky.itrains {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#46506a), to(#1b1b1d));
+  background-image: linear-gradient(to top, #46506a, #1b1b1d);
+}
+
+.twilight.hills {
+  -webkit-filter: saturate(90%) brightness(70%);
+  filter: saturate(90%) brightness(70%);
+}
+
+.twilight.hills.clouds {
+  -webkit-filter: saturate(80%) brightness(60%);
+  filter: saturate(80%) brightness(60%);
+}
+
+.twilight.hills.moreclouds {
+  -webkit-filter: saturate(70%) brightness(50%);
+  filter: saturate(70%) brightness(50%);
+}
+
+.twilight.hills.itrains {
+  -webkit-filter: saturate(60%) brightness(40%);
+  filter: saturate(60%) brightness(40%);
+}
+
+.night.sky {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(32, 26, 54, 0.6)), to(rgba(12, 12, 14, 0.7))), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
+  background-image: linear-gradient(to top, rgba(32, 26, 54, 0.6), rgba(12, 12, 14, 0.7)), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
+  background-size: 70%;
+}
+
+.night.sky.clouds {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(32, 26, 54, 0.85)), to(#161616)), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
+  background-image: linear-gradient(to top, rgba(32, 26, 54, 0.85), #161616), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
+  background-size: 70%;
+}
+
+.night.sky.moreclouds {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#262430), to(#0e0e0e));
+  background-image: linear-gradient(to top, #262430, #0e0e0e);
+}
+
+.night.sky.itrains {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#2c2c2d), to(black));
+  background-image: linear-gradient(to top, #2c2c2d, black);
+}
+
+.night.hills {
+  -webkit-filter: saturate(90%) brightness(90%);
+  filter: saturate(90%) brightness(90%);
+}
+
+.night.hills.clouds {
+  -webkit-filter: saturate(50%) brightness(30%);
+  filter: saturate(50%) brightness(30%);
+}
+
+.night.hills.moreclouds {
+  -webkit-filter: saturate(40%) brightness(20%);
+  filter: saturate(40%) brightness(20%);
+}
+
+.night.hills.itrains {
+  -webkit-filter: saturate(30%) brightness(10%);
+  filter: saturate(30%) brightness(10%);
 }
 
 .sun--rise {
@@ -163,27 +322,24 @@ body {
   animation-fill-mode: forwards;
 }
 
-.background {
-  -webkit-transition: background-image 10s ease-in , background-color 10s ease-in;
-  transition: background-image 10s ease-in , background-color 10s ease-in;
+.teste-console {
+  z-index: 10;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  grid-gap: 5px;
 }
 
-.background.day {
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 0, 0.3)), to(rgba(0, 168, 255, 0.5)));
-  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(0, 168, 255, 0.5));
-  background-color: white;
+.teste-buttom {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ced2d6), to(#caecf1));
+  background-image: linear-gradient(to bottom, #ced2d6, #caecf1);
+  cursor: pointer;
 }
 
-.background.twilight {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#201a36), to(#18132d));
-  background-image: linear-gradient(to top, #201a36, #18132d);
-  background-color: #273c75;
-}
-
-.background.night {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(39, 60, 117, 0.4)), to(rgba(53, 59, 72, 0.4))), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
-  background-image: linear-gradient(to top, rgba(39, 60, 117, 0.4), rgba(53, 59, 72, 0.4)), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
+.teste01,.teste08 {
+  grid-column: span 2;
 }
 
 @-webkit-keyframes sunrise {

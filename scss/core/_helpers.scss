@@ -51,27 +51,21 @@ animation-fill-mode: forwards;
   }
 }
 
-.background {
-  transition: background-image 10s ease-in , background-color 10s ease-in;
-
-&.day {
-  background-size: 100%;
-  background-image: linear-gradient(to top, rgba(255,255,0,0.3), rgba(0, 168, 255,0.5));
-  background-color: white;
+.teste-console {
+  z-index: 10;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  grid-gap: 5px;
 }
 
-&.twilight {
-
-  background-image: linear-gradient(to top, rgb(32, 26, 54), rgb(24, 19, 45));
-  background-color: rgba(39, 60, 117, 1);
+.teste-buttom {
+  background-image: linear-gradient(to bottom, #ced2d6, #caecf1);
+cursor: pointer;
 }
 
-&.night {
-  background-image: linear-gradient(to top, rgba(39, 60, 117, 0.4), rgba(53, 59, 72,0.4)), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
-}
-
-}
-
-.clouds {
-
+.teste01, .teste08 {
+grid-column: span 2;
 }

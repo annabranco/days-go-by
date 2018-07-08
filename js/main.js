@@ -1,50 +1,87 @@
 'use strict';
 
-// audio
+/* global
+document,
+console,
+Audio,
+setTimeout */
+
+// ================= AUDIO
 var bgMusic = new Audio('../audio/BlueAlpineVillage.mp3');
 var sfxMorning = new Audio('../audio/BirdsSinging.mp3');
 var sfxRain = new Audio('../audio/Rain.mp3');
 
-// other variables
-var makeDay = document.querySelector(".makeDay");
-var makeRain = document.querySelector(".makeRain");
-var makeNight = document.querySelector(".makeNight");
-var sky = document.querySelector(".background");
-var cloud = document.querySelector(".cloud");
-var sun = document.querySelector(".sun");
-var hills = document.querySelector(".hills");
-var grass = document.querySelector(".grass");
-var flower = document.querySelector(".flower");
 
-function start() {
-bgMusic.volume = 0.2;
-bgMusic.play();
+// ================= VARIABLES
+var makeDay = document.querySelector('.makeDay');
+var makeRain = document.querySelector('.makeRain');
+var makeNight = document.querySelector('.makeNight');
+var sky = document.querySelector('.sky');
+var hills = document.querySelector('.hills');
+var grass = document.querySelector('.grass');
+var flower = document.querySelector('.flower');
+var cloud = document.querySelector('.cloud');
+var cloudsHigh = document.querySelector('.clouds-high');
+var sun = document.querySelector('.sun');
+var rain = document.querySelector('.rain');
+
+
+var makeRNight = document.querySelector('.makeRNight');
+
+
+// ================= LIGHTNING EFFECTS
+
+
+
+
+function flash() {
+  var tempSkyImg = sky.style.backgroundImage;
+  var tempSkyCol = sky.style.backgroundColor;
+  alert(sky.style.backgroundImage);
+  alert(sky.style.backgroundColor)
+
+  sky.style.backgroundImage = '';
+  sky.style.backgroundColor = 'white';
+
+  setTimeout(function() {
+    sky.style.backgroundImage = tempSkyImg;
+    sky.style.backgroundColor = tempSkyCol;
+  }, 500);
 }
 
-// start();
+// ---------------- WEATHER EVENTS
 
 function rain() {
+  flash();
+  cloudsHigh.style.visibility = 'visible';
   sfxRain.play();
-  cloud.src = "https://preview.ibb.co/c4yVH8/cloud2.png";
+  cloud.src = 'https://preview.ibb.co/c4yVH8/cloud2.png';
+  sky.classList.add('rainny');
+  hills.style.opacity -= '0.2';
+  grass.style.opacity -= '0.2';
 }
+
+// ---------------- NATURE SECONDARY EVENTS
 
 function bloom() {
   flower.classList.add('flower--animate');
 }
 
+
+// ================== TIME EVENTS
+
+//---------- Day
 function day() {
   sfxMorning.play();
   sun.classList.add('sun--rise');
 
 
   setTimeout(function() {
-  sky.classList.add('day');
-    hills.style.opacity = '1';
-    grass.style.opacity = '1';
+    sky.classList.add('day');
   }, 1800);
-
 }
 
+//---------- Night
 function night() {
   cloud.style.visibility = 'hidden';
 
@@ -52,39 +89,47 @@ function night() {
   sun.classList.add('sun--set');
 
   setTimeout(function() {
-  sky.classList.add('twilight');
+    sky.classList.add('twilight');
 
-  hills.style.opacity = '0.7';
-  grass.style.opacity = '0.5';
+    setTimeout(function() {
+      sky.classList.add('night');
 
-  setTimeout(function() {
-    sky.classList.add('night');
+    }, 1000);
 
-  }, 1000);
-
-}, 1600);
+  }, 1600);
 }
 
+//---------- Rainny Night
 function rainnyNight() {
   rain();
-  sky.style.backgroundImage = 'linear-gradient(to top, rgba(53, 59, 72,0.7), rgba(53, 59, 72,1))'
-  ;
-  sky.style.backgroundColor = 'rgba(39, 60, 117, 1)';
-  hills.style.opacity = '0.5';
-  grass.style.opacity = '0.3';
+  // sky.classList.add('rainny');
 }
 
 function makeItRain() {
   cloud.style.visibility = 'visible';
 
-    setTimeout(function() {
-      rain();
-      bloom();
+  setTimeout(function() {
+    rain();
+    bloom();
 
-}, 1600);
-
+  }, 1600);
 }
 
+
+
+// ================== BUTTONS
+
 makeDay.addEventListener('click', day);
-makeRain.addEventListener('click', makeItRain);
+makeRain.addEventListener('click', rain);
 makeNight.addEventListener('click', night);
+makeRNight.addEventListener('click', rainnyNight);
+
+
+// =================== START =========================
+
+function start() {
+  bgMusic.volume = 0.2;
+  bgMusic.play();
+}
+
+//start();
