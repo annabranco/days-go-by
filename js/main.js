@@ -7,11 +7,11 @@ Audio,
 setTimeout */
 
 // ================= AUDIO
-var bgMusic = new Audio('../audio/blueAlpineVillage.mp3');
-var sfxMorning = new Audio('../audio/birdsSinging.mp3');
-var sfxRain = new Audio('../audio/rain.ogg');
-var sfxThunder = new Audio('../audio/thunder.mp3');
-var sfxHeavyRain = new Audio('../audio/heavyRain.ogg');
+var bgMusic = new Audio('https://raw.githubusercontent.com/annabranco/days-go-by/master/audio/blueAlpineVillage.mp3');
+var sfxMorning = new Audio('https://raw.githubusercontent.com/annabranco/days-go-by/master/audio/birdsSinging.mp3');
+var sfxRain = new Audio('https://raw.githubusercontent.com/annabranco/days-go-by/master/audio/rain.ogg');
+var sfxThunder = new Audio('https://raw.githubusercontent.com/annabranco/days-go-by/master/audio/thunder.mp3');
+var sfxHeavyRain = new Audio('https://raw.githubusercontent.com/annabranco/days-go-by/master/audio/heavyRain.ogg');
 
 // ================= VARIABLES
 var makeDay = document.querySelector('.makeDay');
