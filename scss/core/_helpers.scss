@@ -1,9 +1,9 @@
 .sun--rise {
-  animation-name: sunrise;
-animation-duration: 5s;
-animation-iteration-count: 1;
-animation-fill-mode: forwards;
-animation-timing-function: ease-out;
+  animation-name           : sunrise;
+  animation-duration       : 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode      : forwards;
+  animation-timing-function: ease-out;
 }
 
 @keyframes sunrise {
@@ -11,17 +11,18 @@ animation-timing-function: ease-out;
     top: 600px;
     /* transform: translate(0, -200px); */
   }
+
   to {
     top: 10%;
   }
 }
 
 .sun--set {
-  animation-name: sunset;
-animation-duration: 5s;
-animation-iteration-count: 1;
-animation-fill-mode: forwards;
-animation-timing-function: ease-in;
+  animation-name           : sunset;
+  animation-duration       : 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode      : forwards;
+  animation-timing-function: ease-in;
 }
 
 @keyframes sunset {
@@ -29,16 +30,17 @@ animation-timing-function: ease-in;
     top: 10%;
     /* transform: translate(0, -200px); */
   }
+
   to {
     top: -200%;
   }
 }
 
 .flower--animate {
-  animation-name: bloom;
-animation-duration: 8s;
-animation-iteration-count: 1;
-animation-fill-mode: forwards;
+  animation-name           : bloom;
+  animation-duration       : 8s;
+  animation-iteration-count: 1;
+  animation-fill-mode      : forwards;
 
 }
 
@@ -46,26 +48,29 @@ animation-fill-mode: forwards;
   from {
     bottom: -200px;
   }
+
   to {
-      bottom: 18%;
+    bottom: 15%;
   }
 }
 
 .teste-console {
-  z-index: 10;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  display: grid;
+  z-index              : 10;
+  position             : absolute;
+  right                : 5px;
+  top                  : 5px;
+  display              : grid;
   grid-template-columns: repeat(5, 80px);
-  grid-gap: 5px;
+  grid-gap             : 5px;
+  // display              : none;
 }
 
 .teste-buttom {
   background-image: linear-gradient(to bottom, #ced2d6, #caecf1);
-cursor: pointer;
+  cursor          : pointer;
 }
 
-.teste01, .teste08 {
-grid-column: span 2;
+.teste01,
+.teste08 {
+  grid-column: span 2;
 }

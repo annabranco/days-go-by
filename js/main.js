@@ -7,10 +7,11 @@ Audio,
 setTimeout */
 
 // ================= AUDIO
-var bgMusic = new Audio('../audio/BlueAlpineVillage.mp3');
-var sfxMorning = new Audio('../audio/BirdsSinging.mp3');
-var sfxRain = new Audio('../audio/Rain.mp3');
-
+var bgMusic = new Audio('../audio/blueAlpineVillage.mp3');
+var sfxMorning = new Audio('../audio/birdsSinging.mp3');
+var sfxRain = new Audio('../audio/rain.ogg');
+var sfxThunder = new Audio('../audio/thunder.mp3');
+var sfxHeavyRain = new Audio('../audio/heavyRain.ogg');
 
 // ================= VARIABLES
 var makeDay = document.querySelector('.makeDay');
@@ -24,6 +25,8 @@ var cloud = document.querySelector('.cloud');
 var cloudsHigh = document.querySelector('.clouds-high');
 var sun = document.querySelector('.sun');
 var rain = document.querySelector('.rain');
+var heavyRain = document.querySelector('.heavyRain');
+var rainbow = document.querySelector('.rainbow');
 
 
 var makeRNight = document.querySelector('.makeRNight');

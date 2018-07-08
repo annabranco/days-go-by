@@ -60,7 +60,7 @@ body {
 }
 
 .clouds-high {
-  z-index: 4;
+  z-index: 5;
   position: absolute;
   top: -50px;
   height: 57px;
@@ -68,6 +68,7 @@ body {
   background-image: url("../images/cloudsTop.png");
   background-repeat: round no-repeat;
   background-size: 20%;
+  background-position: bottom;
   display: none;
 }
 
@@ -106,15 +107,31 @@ body {
   transform: translate(-50%, 0);
 }
 
+.rainbow {
+  display: none;
+}
+
 .rain {
   z-index: 3;
   position: absolute;
   top: 0;
   height: 100vh;
   width: 100vw;
-  background-image: url("https://i.gifer.com/3BBK.gif");
+  background-image: url("../images/rain.gif");
   background-repeat: round;
   display: none;
+}
+
+.heavyRain {
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../images/heavyRain.gif");
+  background-repeat: round;
+  display: none;
+  opacity: 0.5;
 }
 
 .button {
@@ -160,6 +177,40 @@ body {
   background-size: 60%;
 }
 
+.neutral.sun {
+  -webkit-filter: saturate(100%) brightness(100%) contrast(100%);
+  filter: saturate(100%) brightness(100%) contrast(100%);
+}
+
+.neutral.hills {
+  -webkit-filter: saturate(100%) brightness(100%) contrast(100%);
+  filter: saturate(100%) brightness(100%) contrast(100%);
+}
+
+.neutral.grass {
+  -webkit-filter: saturate(100%) brightness(100%) contrast(100%);
+  filter: saturate(100%) brightness(100%) contrast(100%);
+}
+
+.neutral.flower {
+  -webkit-filter: saturate(100%) brightness(100%) contrast(100%);
+  filter: saturate(100%) brightness(100%) contrast(100%);
+}
+
+.neutral.cloud {
+  -webkit-filter: saturate(100%) brightness(100%) contrast(100%);
+  filter: saturate(100%) brightness(100%) contrast(100%);
+}
+
+.neutral.cloudsHigh {
+  -webkit-filter: saturate(100%) brightness(100%) contrast(100%);
+  filter: saturate(100%) brightness(100%) contrast(100%);
+}
+
+.neutral.rainbow {
+  opacity: 100%;
+}
+
 .day.sky {
   background-size: 100%;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 0, 0.3)), to(rgba(0, 168, 255, 0.5)));
@@ -183,24 +234,140 @@ body {
   background-color: #273c75;
 }
 
+.day.sun {
+  -webkit-filter: saturate(100%) brightness(100%) contrast(100%);
+  filter: saturate(100%) brightness(100%) contrast(100%);
+}
+
+.day.sun.clouds {
+  -webkit-filter: saturate(90%) brightness(80%) contrast(105%);
+  filter: saturate(90%) brightness(80%) contrast(105%);
+}
+
+.day.sun.moreclouds {
+  -webkit-filter: saturate(80%) brightness(60%) contrast(110%);
+  filter: saturate(80%) brightness(60%) contrast(110%);
+}
+
+.day.sun.itrains {
+  -webkit-filter: saturate(70%) brightness(47%) contrast(115%);
+  filter: saturate(70%) brightness(47%) contrast(115%);
+}
+
 .day.hills {
-  -webkit-filter: saturate(100%) brightness(100%);
-  filter: saturate(100%) brightness(100%);
+  -webkit-filter: saturate(100%) brightness(100%) contrast(150%);
+  filter: saturate(100%) brightness(100%) contrast(150%);
 }
 
 .day.hills.clouds {
-  -webkit-filter: saturate(90%) brightness(90%);
-  filter: saturate(90%) brightness(90%);
+  -webkit-filter: saturate(90%) brightness(90%) contrast(100%);
+  filter: saturate(90%) brightness(90%) contrast(100%);
 }
 
 .day.hills.moreclouds {
-  -webkit-filter: saturate(80%) brightness(80%);
-  filter: saturate(80%) brightness(80%);
+  -webkit-filter: saturate(80%) brightness(80%) contrast(100%);
+  filter: saturate(80%) brightness(80%) contrast(100%);
 }
 
 .day.hills.itrains {
-  -webkit-filter: saturate(70%) brightness(70%);
-  filter: saturate(70%) brightness(70%);
+  -webkit-filter: saturate(70%) brightness(70%) contrast(90%);
+  filter: saturate(70%) brightness(70%) contrast(90%);
+}
+
+.day.grass {
+  -webkit-filter: saturate(100%) brightness(100%) contrast(110%);
+  filter: saturate(100%) brightness(100%) contrast(110%);
+}
+
+.day.grass.clouds {
+  -webkit-filter: saturate(90%) brightness(90%) contrast(110%);
+  filter: saturate(90%) brightness(90%) contrast(110%);
+}
+
+.day.grass.moreclouds {
+  -webkit-filter: saturate(80%) brightness(80%) contrast(110%);
+  filter: saturate(80%) brightness(80%) contrast(110%);
+}
+
+.day.grass.itrains {
+  -webkit-filter: saturate(70%) brightness(70%) contrast(110%);
+  filter: saturate(70%) brightness(70%) contrast(110%);
+}
+
+.day.flower {
+  -webkit-filter: saturate(100%) brightness(100%) contrast(110%);
+  filter: saturate(100%) brightness(100%) contrast(110%);
+}
+
+.day.flower.clouds {
+  -webkit-filter: saturate(90%) brightness(90%) contrast(110%);
+  filter: saturate(90%) brightness(90%) contrast(110%);
+}
+
+.day.flower.moreclouds {
+  -webkit-filter: saturate(80%) brightness(80%) contrast(110%);
+  filter: saturate(80%) brightness(80%) contrast(110%);
+}
+
+.day.flower.itrains {
+  -webkit-filter: saturate(70%) brightness(70%) contrast(110%);
+  filter: saturate(70%) brightness(70%) contrast(110%);
+}
+
+.day.cloud {
+  -webkit-filter: saturate(100%) brightness(100%) contrast(110%);
+  filter: saturate(100%) brightness(100%) contrast(110%);
+}
+
+.day.cloud.clouds {
+  -webkit-filter: saturate(100%) brightness(100%) contrast(110%);
+  filter: saturate(100%) brightness(100%) contrast(110%);
+}
+
+.day.cloud.moreclouds {
+  -webkit-filter: saturate(80%) brightness(80%) contrast(110%);
+  filter: saturate(80%) brightness(80%) contrast(110%);
+}
+
+.day.cloud.itrains {
+  -webkit-filter: saturate(70%) brightness(70%) contrast(120%);
+  filter: saturate(70%) brightness(70%) contrast(120%);
+}
+
+.day.clouds-high {
+  -webkit-filter: saturate(100%) brightness(100%) contrast(100%);
+  filter: saturate(100%) brightness(100%) contrast(100%);
+}
+
+.day.clouds-high.clouds {
+  -webkit-filter: saturate(90%) brightness(90%) contrast(120%);
+  filter: saturate(90%) brightness(90%) contrast(120%);
+}
+
+.day.clouds-high.moreclouds {
+  -webkit-filter: saturate(80%) brightness(70%) contrast(130%);
+  filter: saturate(80%) brightness(70%) contrast(130%);
+}
+
+.day.clouds-high.itrains {
+  -webkit-filter: saturate(50%) brightness(50%) contrast(140%);
+  filter: saturate(50%) brightness(50%) contrast(140%);
+}
+
+.day.rainbow {
+  opacity: 1;
+}
+
+.day.rainbow.clouds {
+  opacity: 0.7;
+}
+
+.day.rainbow.moreclouds {
+  opacity: 0.3;
+}
+
+.day.rainbow.itrains {
+  opacity: 0.2;
 }
 
 .twilight.sky {
@@ -224,34 +391,114 @@ body {
 }
 
 .twilight.hills {
-  -webkit-filter: saturate(90%) brightness(70%);
-  filter: saturate(90%) brightness(70%);
+  -webkit-filter: saturate(90%) brightness(70%) contrast(100%);
+  filter: saturate(90%) brightness(70%) contrast(100%);
 }
 
 .twilight.hills.clouds {
-  -webkit-filter: saturate(80%) brightness(60%);
-  filter: saturate(80%) brightness(60%);
+  -webkit-filter: saturate(80%) brightness(60%) contrast(100%);
+  filter: saturate(80%) brightness(60%) contrast(100%);
 }
 
 .twilight.hills.moreclouds {
-  -webkit-filter: saturate(70%) brightness(50%);
-  filter: saturate(70%) brightness(50%);
+  -webkit-filter: saturate(70%) brightness(50%) contrast(100%);
+  filter: saturate(70%) brightness(50%) contrast(100%);
 }
 
 .twilight.hills.itrains {
-  -webkit-filter: saturate(60%) brightness(40%);
-  filter: saturate(60%) brightness(40%);
+  -webkit-filter: saturate(60%) brightness(40%) contrast(100%);
+  filter: saturate(60%) brightness(40%) contrast(100%);
+}
+
+.twilight.grass {
+  -webkit-filter: saturate(90%) brightness(80%) contrast(100%);
+  filter: saturate(90%) brightness(80%) contrast(100%);
+}
+
+.twilight.grass.clouds {
+  -webkit-filter: saturate(90%) brightness(70%) contrast(100%);
+  filter: saturate(90%) brightness(70%) contrast(100%);
+}
+
+.twilight.grass.moreclouds {
+  -webkit-filter: saturate(80%) brightness(60%) contrast(100%);
+  filter: saturate(80%) brightness(60%) contrast(100%);
+}
+
+.twilight.grass.itrains {
+  -webkit-filter: saturate(70%) brightness(50%) contrast(100%);
+  filter: saturate(70%) brightness(50%) contrast(100%);
+}
+
+.twilight.flower {
+  -webkit-filter: saturate(90%) brightness(80%) contrast(110%);
+  filter: saturate(90%) brightness(80%) contrast(110%);
+}
+
+.twilight.flower.clouds {
+  -webkit-filter: saturate(90%) brightness(70%) contrast(110%);
+  filter: saturate(90%) brightness(70%) contrast(110%);
+}
+
+.twilight.flower.moreclouds {
+  -webkit-filter: saturate(80%) brightness(60%) contrast(110%);
+  filter: saturate(80%) brightness(60%) contrast(110%);
+}
+
+.twilight.flower.itrains {
+  -webkit-filter: saturate(70%) brightness(50%) contrast(110%);
+  filter: saturate(70%) brightness(50%) contrast(110%);
+}
+
+.twilight.cloud {
+  -webkit-filter: saturate(90%) brightness(80%) contrast(100%);
+  filter: saturate(90%) brightness(80%) contrast(100%);
+}
+
+.twilight.cloud.clouds {
+  -webkit-filter: saturate(90%) brightness(70%) contrast(120%);
+  filter: saturate(90%) brightness(70%) contrast(120%);
+}
+
+.twilight.cloud.moreclouds {
+  -webkit-filter: saturate(80%) brightness(60%) contrast(130%);
+  filter: saturate(80%) brightness(60%) contrast(130%);
+}
+
+.twilight.cloud.itrains {
+  -webkit-filter: saturate(70%) brightness(40%) contrast(130%);
+  filter: saturate(70%) brightness(40%) contrast(130%);
+}
+
+.twilight.clouds-high {
+  -webkit-filter: saturate(90%) brightness(70%) contrast(100%);
+  filter: saturate(90%) brightness(70%) contrast(100%);
+}
+
+.twilight.clouds-high.clouds {
+  -webkit-filter: saturate(90%) brightness(60%) contrast(110%);
+  filter: saturate(90%) brightness(60%) contrast(110%);
+}
+
+.twilight.clouds-high.moreclouds {
+  -webkit-filter: saturate(80%) brightness(50%) contrast(130%);
+  filter: saturate(80%) brightness(50%) contrast(130%);
+}
+
+.twilight.clouds-high.itrains {
+  -webkit-filter: saturate(70%) brightness(40%) contrast(150%);
+  filter: saturate(70%) brightness(40%) contrast(150%);
 }
 
 .night.sky {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(32, 26, 54, 0.6)), to(rgba(12, 12, 14, 0.7))), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
-  background-image: linear-gradient(to top, rgba(32, 26, 54, 0.6), rgba(12, 12, 14, 0.7)), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(32, 26, 54, 0.6)), to(rgba(12, 12, 14, 0.7))), url("../images/stars.gif");
+  background-image: linear-gradient(to top, rgba(32, 26, 54, 0.6), rgba(12, 12, 14, 0.7)), url("../images/stars.gif");
   background-size: 70%;
 }
 
 .night.sky.clouds {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(32, 26, 54, 0.85)), to(#161616)), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
-  background-image: linear-gradient(to top, rgba(32, 26, 54, 0.85), #161616), url(https://i.pinimg.com/originals/a6/bf/1c/a6bf1ca75ad990e12c886616b5adfa02.gif);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(32, 26, 54, 0.85)), to(#161616)), url("../images/stars.gif");
+  background-image: linear-gradient(to top, rgba(32, 26, 54, 0.85), #161616), url("../images/stars.gif");
   background-size: 70%;
 }
 
@@ -266,23 +513,103 @@ body {
 }
 
 .night.hills {
-  -webkit-filter: saturate(90%) brightness(90%);
-  filter: saturate(90%) brightness(90%);
+  -webkit-filter: saturate(90%) brightness(80%) contrast(100%);
+  filter: saturate(90%) brightness(80%) contrast(100%);
 }
 
 .night.hills.clouds {
-  -webkit-filter: saturate(50%) brightness(30%);
-  filter: saturate(50%) brightness(30%);
+  -webkit-filter: saturate(50%) brightness(40%) contrast(100%);
+  filter: saturate(50%) brightness(40%) contrast(100%);
 }
 
 .night.hills.moreclouds {
-  -webkit-filter: saturate(40%) brightness(20%);
-  filter: saturate(40%) brightness(20%);
+  -webkit-filter: saturate(40%) brightness(20%) contrast(110%);
+  filter: saturate(40%) brightness(20%) contrast(110%);
 }
 
 .night.hills.itrains {
-  -webkit-filter: saturate(30%) brightness(10%);
-  filter: saturate(30%) brightness(10%);
+  -webkit-filter: saturate(30%) brightness(10%) contrast(110%);
+  filter: saturate(30%) brightness(10%) contrast(110%);
+}
+
+.night.grass {
+  -webkit-filter: saturate(90%) brightness(60%) contrast(100%);
+  filter: saturate(90%) brightness(60%) contrast(100%);
+}
+
+.night.grass.clouds {
+  -webkit-filter: saturate(60%) brightness(40%) contrast(110%);
+  filter: saturate(60%) brightness(40%) contrast(110%);
+}
+
+.night.grass.moreclouds {
+  -webkit-filter: saturate(40%) brightness(20%) contrast(112%);
+  filter: saturate(40%) brightness(20%) contrast(112%);
+}
+
+.night.grass.itrains {
+  -webkit-filter: saturate(25%) brightness(15%) contrast(115%);
+  filter: saturate(25%) brightness(15%) contrast(115%);
+}
+
+.night.flower {
+  -webkit-filter: saturate(70%) brightness(80%) contrast(100%);
+  filter: saturate(70%) brightness(80%) contrast(100%);
+}
+
+.night.flower.clouds {
+  -webkit-filter: saturate(60%) brightness(35%) contrast(90%);
+  filter: saturate(60%) brightness(35%) contrast(90%);
+}
+
+.night.flower.moreclouds {
+  -webkit-filter: saturate(40%) brightness(10%) contrast(100%);
+  filter: saturate(40%) brightness(10%) contrast(100%);
+}
+
+.night.flower.itrains {
+  -webkit-filter: saturate(40%) brightness(8%) contrast(110%);
+  filter: saturate(40%) brightness(8%) contrast(110%);
+}
+
+.night.cloud {
+  -webkit-filter: saturate(80%) brightness(80%) contrast(100%);
+  filter: saturate(80%) brightness(80%) contrast(100%);
+}
+
+.night.cloud.clouds {
+  -webkit-filter: saturate(60%) brightness(50%) contrast(90%);
+  filter: saturate(60%) brightness(50%) contrast(90%);
+}
+
+.night.cloud.moreclouds {
+  -webkit-filter: saturate(40%) brightness(10%) contrast(100%);
+  filter: saturate(40%) brightness(10%) contrast(100%);
+}
+
+.night.cloud.itrains {
+  -webkit-filter: saturate(25%) brightness(5%) contrast(130%);
+  filter: saturate(25%) brightness(5%) contrast(130%);
+}
+
+.night.clouds-high {
+  -webkit-filter: saturate(90%) brightness(40%) contrast(100%);
+  filter: saturate(90%) brightness(40%) contrast(100%);
+}
+
+.night.clouds-high.clouds {
+  -webkit-filter: saturate(60%) brightness(30%) contrast(110%);
+  filter: saturate(60%) brightness(30%) contrast(110%);
+}
+
+.night.clouds-high.moreclouds {
+  -webkit-filter: saturate(100%) brightness(20%) contrast(150%);
+  filter: saturate(100%) brightness(20%) contrast(150%);
+}
+
+.night.clouds-high.itrains {
+  -webkit-filter: saturate(100%) brightness(5%) contrast(150%);
+  filter: saturate(100%) brightness(5%) contrast(150%);
 }
 
 .sun--rise {
@@ -392,7 +719,7 @@ body {
   }
 
   to {
-    bottom: 18%;
+    bottom: 15%;
   }
 }
 
@@ -402,7 +729,7 @@ body {
   }
 
   to {
-    bottom: 18%;
+    bottom: 15%;
   }
 }
 

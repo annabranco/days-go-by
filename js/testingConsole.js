@@ -10,6 +10,12 @@ cloud,
 cloudsHigh,
 sun,
 rain,
+rainbow,
+heavyRain,
+sfxMorning,
+sfxRain,
+sfxThunder,
+sfxHeavyRain,
 document,
 console,
 Audio,
@@ -31,30 +37,44 @@ var teste10 = document.querySelector('.teste10');
 var teste11 = document.querySelector('.teste11');
 var teste12 = document.querySelector('.teste12');
 var teste13 = document.querySelector('.teste13');
+var teste14 = document.querySelector('.teste14');
+var teste15 = document.querySelector('.teste15');
+
 
 var elementsList = [
   sky,
+  sun,
   hills,
   grass,
   flower,
   cloud,
-  cloudsHigh
+  cloudsHigh,
+  rainbow
 ];
 
-teste01.addEventListener('click',lightNeutral);
-teste02.addEventListener('click',lightDay);
-teste03.addEventListener('click',lightTwilight);
-teste04.addEventListener('click',lightNight);
-teste05.addEventListener('click',addClouds);
-teste06.addEventListener('click',addMoreClouds);
-teste07.addEventListener('click',addRain);
-teste08.addEventListener('click',clearSky);
-teste09.addEventListener('click',addSun);
-teste10.addEventListener('click',addCloudsHigh);
-teste11.addEventListener('click',addCloud);
-teste12.addEventListener('click',makeItRain);
-teste13.addEventListener('click',addFlower);
+teste01.addEventListener('click', lightNeutral);
+teste02.addEventListener('click', lightDay);
+teste03.addEventListener('click', lightTwilight);
+teste04.addEventListener('click', lightNight);
+teste05.addEventListener('click', clearSky);
+teste06.addEventListener('click', addClouds);
+teste07.addEventListener('click', addMoreClouds);
+teste08.addEventListener('click', addRain);
+teste09.addEventListener('click', addSun);
+teste10.addEventListener('click', addCloudsHigh);
+teste11.addEventListener('click', addCloud);
+teste12.addEventListener('click', makeItRain);
+teste13.addEventListener('click', addFlower);
+teste14.addEventListener('click', moreRain);
+teste15.addEventListener('click', addRainbow);
 
+
+// function testAudio(event) {
+//   var audio2Play = event.currentTarget.value;
+//   audio2Play = 'sfxRain';
+//   console.log(audio2Play);
+//   audio2Play.play();
+// }
 
 function lightNeutral() {
   var i;
@@ -126,11 +146,20 @@ function addRain() {
 }
 
 function addSun() {
-  sun.classList.toggle('teste');
   if (sun.style.display === 'block') {
-    sun.style.display = 'none';
+    sfxMorning.pause();
+    sun.classList.remove('sun--rise');
+    sun.classList.add('sun--set');
+    setTimeout(function() {
+      sun.style.display = 'none';
+      sun.classList.remove('sun--set');
+    }, 2000);
   } else {
     sun.style.display = 'block';
+    sfxMorning.loop = true;
+    sfxMorning.play();
+    sun.classList.remove('sun--set');
+    sun.classList.add('sun--rise');
   }
 }
 
@@ -156,16 +185,52 @@ function addCloud() {
 
 function makeItRain() {
   if (rain.style.display === 'block') {
+    sfxRain.pause();
     rain.style.display = 'none';
   } else {
     rain.style.display = 'block';
+    sfxRain.volume = 0.3;
+    sfxRain.loop = true;
+    sfxRain.play();
   }
 }
+
+function moreRain() {
+  var thunders;
+  if (heavyRain.style.display === 'block') {
+    sfxHeavyRain.pause();
+    heavyRain.style.display = 'none';
+  } else {
+    sfxThunder.play();
+    sfxHeavyRain.loop = true;
+    sfxHeavyRain.play();
+    heavyRain.style.display = 'block';
+    setTimeout(function() {
+      sfxThunder.play();
+    }, 10500);
+
+
+  }
+}
+
+function addRainbow() {
+
+  if (rainbow.style.display === 'block') {
+    rainbow.style.display = 'none';
+  } else {
+    rainbow.style.display = 'block';
+  }
+}
+
 function addFlower() {
-  flower.classList.toggle('teste');
+  flower.classList.add('flower--animate');
   if (flower.style.display === 'block') {
     flower.style.display = 'none';
   } else {
     flower.style.display = 'block';
   }
+}
+
+function teste() {
+  testeConsole.style.display = 'grid';
 }
