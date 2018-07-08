@@ -60,9 +60,20 @@
   right                : 5px;
   top                  : 5px;
   display              : grid;
-  grid-template-columns: repeat(5, 80px);
+  grid-template-columns: repeat(2, 70px);
   grid-gap             : 5px;
   // display              : none;
+
+  @media all and (min-width:768px) {
+    z-index              : 10;
+    position             : absolute;
+    right                : 5px;
+    top                  : 5px;
+    display              : grid;
+    grid-template-columns: repeat(5, 80px);
+    grid-gap             : 5px;
+    // display              : none;
+  }
 }
 
 .teste-buttom {

@@ -655,7 +655,7 @@ body {
   right: 5px;
   top: 5px;
   display: grid;
-  grid-template-columns: repeat(5, 80px);
+  grid-template-columns: repeat(2, 70px);
   grid-gap: 5px;
 }
 
@@ -667,6 +667,18 @@ body {
 
 .teste01,.teste08 {
   grid-column: span 2;
+}
+
+@media all and (min-width: 768px) {
+  .teste-console {
+    z-index: 10;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    grid-gap: 5px;
+  }
 }
 
 @-webkit-keyframes sunrise {
