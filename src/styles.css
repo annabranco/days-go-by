@@ -1,0 +1,442 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+.version {
+  font-family: sans-serif;
+  z-index: 10;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 0.7rem;
+  color: white; }
+
+.author {
+  font-family: sans-serif;
+  z-index: 10;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-size: 0.7rem;
+  color: white; }
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden; }
+
+.sky {
+  position: relative;
+  align-items: center;
+  padding-top: 30px;
+  height: 100vh;
+  overflow: hidden;
+  transition: background-image 10s ease-in, background-color 10s ease-in; }
+
+.hills {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50vh;
+  width: 100vw; }
+
+.button {
+  margin-right: 500px;
+  width: 100px;
+  background: lightgray;
+  border: 1px solid;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer; }
+
+.grass {
+  z-index: 3;
+  position: absolute;
+  bottom: -15px;
+  left: -40px;
+  display: block;
+  width: 120vw;
+  height: 35%; }
+
+.teste-console {
+  z-index: 10;
+  position: absolute;
+  right: 5px;
+  bottom: 15%;
+  display: grid;
+  grid-template-columns: repeat(2, 80px);
+  grid-gap: 2px; }
+  @media all and (min-width: 768px) {
+    .teste-console {
+      z-index: 10;
+      position: absolute;
+      right: 5px;
+      bottom: 10%;
+      display: grid;
+      grid-template-columns: repeat(4, 80px);
+      grid-gap: 5px; } }
+
+.teste-buttom {
+  background-image: linear-gradient(to bottom, #ced2d6, #caecf1);
+  cursor: pointer;
+  font-family: sans-serif; }
+
+.teste-title {
+  text-align: center;
+  background: rgba(255, 255, 0, 0.5);
+  grid-column: span 4;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: sans-serif; }
+
+.neutral.sky {
+  background-image: linear-gradient(to top, #273c75, #353b48);
+  background-size: 60%; }
+
+.neutral.sun {
+  filter: saturate(100%) brightness(100%) contrast(100%); }
+
+.neutral.hills {
+  filter: saturate(100%) brightness(100%) contrast(100%); }
+
+.neutral.grass {
+  filter: saturate(100%) brightness(100%) contrast(100%); }
+
+.neutral.flower {
+  filter: saturate(100%) brightness(100%) contrast(100%); }
+
+.neutral.cloud {
+  filter: saturate(100%) brightness(100%) contrast(100%); }
+
+.neutral.cloudsHigh {
+  filter: saturate(100%) brightness(100%) contrast(100%); }
+
+.neutral.rainbow {
+  opacity: 100%; }
+
+.day.sky {
+  background-size: 100%;
+  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(0, 168, 255, 0.5));
+  background-color: white; }
+  .day.sky.clouds {
+    background-image: linear-gradient(to top, #4f6dbd, #505b73); }
+  .day.sky.moreclouds {
+    background-image: linear-gradient(to top, #273c75, #353b48); }
+  .day.sky.itrains {
+    background-image: linear-gradient(to top, rgba(53, 59, 72, 0.7), #353b48);
+    background-color: #273c75; }
+
+.day.sun {
+  filter: saturate(100%) brightness(100%) contrast(100%); }
+  .day.sun.clouds {
+    filter: saturate(90%) brightness(80%) contrast(105%); }
+  .day.sun.moreclouds {
+    filter: saturate(80%) brightness(60%) contrast(110%); }
+  .day.sun.itrains {
+    filter: saturate(70%) brightness(47%) contrast(115%); }
+
+.day.hills {
+  filter: saturate(100%) brightness(100%) contrast(150%); }
+  .day.hills.clouds {
+    filter: saturate(90%) brightness(90%) contrast(100%); }
+  .day.hills.moreclouds {
+    filter: saturate(80%) brightness(80%) contrast(100%); }
+  .day.hills.itrains {
+    filter: saturate(70%) brightness(70%) contrast(90%); }
+
+.day.grass {
+  filter: saturate(100%) brightness(100%) contrast(110%); }
+  .day.grass.clouds {
+    filter: saturate(90%) brightness(90%) contrast(110%); }
+  .day.grass.moreclouds {
+    filter: saturate(80%) brightness(80%) contrast(110%); }
+  .day.grass.itrains {
+    filter: saturate(70%) brightness(70%) contrast(110%); }
+
+.day.flower {
+  filter: saturate(100%) brightness(100%) contrast(110%); }
+  .day.flower.clouds {
+    filter: saturate(90%) brightness(90%) contrast(110%); }
+  .day.flower.moreclouds {
+    filter: saturate(80%) brightness(80%) contrast(110%); }
+  .day.flower.itrains {
+    filter: saturate(70%) brightness(70%) contrast(110%); }
+
+.day.cloud {
+  filter: saturate(100%) brightness(100%) contrast(110%); }
+  .day.cloud.clouds {
+    filter: saturate(100%) brightness(100%) contrast(110%); }
+  .day.cloud.moreclouds {
+    filter: saturate(80%) brightness(80%) contrast(110%); }
+  .day.cloud.itrains {
+    filter: saturate(70%) brightness(70%) contrast(120%); }
+
+.day.clouds-high {
+  filter: saturate(100%) brightness(100%) contrast(100%); }
+  .day.clouds-high.clouds {
+    filter: saturate(90%) brightness(90%) contrast(120%); }
+  .day.clouds-high.moreclouds {
+    filter: saturate(80%) brightness(70%) contrast(130%); }
+  .day.clouds-high.itrains {
+    filter: saturate(50%) brightness(50%) contrast(140%); }
+
+.day.rainbow {
+  opacity: 1; }
+  .day.rainbow.clouds {
+    opacity: 0.7; }
+  .day.rainbow.moreclouds {
+    opacity: 0.3; }
+  .day.rainbow.itrains {
+    opacity: 0.2; }
+
+.twilight.sky {
+  background-image: linear-gradient(to top, #2e478b, #18182b); }
+  .twilight.sky.clouds {
+    background-image: linear-gradient(to top, #46506a, #212128); }
+  .twilight.sky.moreclouds {
+    background-image: linear-gradient(to top, #46506a, #1f1f24); }
+  .twilight.sky.itrains {
+    background-image: linear-gradient(to top, #46506a, #1b1b1d); }
+
+.twilight.hills {
+  filter: saturate(90%) brightness(70%) contrast(100%); }
+  .twilight.hills.clouds {
+    filter: saturate(80%) brightness(60%) contrast(100%); }
+  .twilight.hills.moreclouds {
+    filter: saturate(70%) brightness(50%) contrast(100%); }
+  .twilight.hills.itrains {
+    filter: saturate(60%) brightness(40%) contrast(100%); }
+
+.twilight.grass {
+  filter: saturate(90%) brightness(80%) contrast(100%); }
+  .twilight.grass.clouds {
+    filter: saturate(90%) brightness(70%) contrast(100%); }
+  .twilight.grass.moreclouds {
+    filter: saturate(80%) brightness(60%) contrast(100%); }
+  .twilight.grass.itrains {
+    filter: saturate(70%) brightness(50%) contrast(100%); }
+
+.twilight.flower {
+  filter: saturate(90%) brightness(80%) contrast(110%); }
+  .twilight.flower.clouds {
+    filter: saturate(90%) brightness(70%) contrast(110%); }
+  .twilight.flower.moreclouds {
+    filter: saturate(80%) brightness(60%) contrast(110%); }
+  .twilight.flower.itrains {
+    filter: saturate(70%) brightness(50%) contrast(110%); }
+
+.twilight.cloud {
+  filter: saturate(90%) brightness(80%) contrast(100%); }
+  .twilight.cloud.clouds {
+    filter: saturate(90%) brightness(70%) contrast(120%); }
+  .twilight.cloud.moreclouds {
+    filter: saturate(80%) brightness(60%) contrast(130%); }
+  .twilight.cloud.itrains {
+    filter: saturate(70%) brightness(40%) contrast(130%); }
+
+.twilight.clouds-high {
+  filter: saturate(90%) brightness(70%) contrast(100%); }
+  .twilight.clouds-high.clouds {
+    filter: saturate(90%) brightness(60%) contrast(110%); }
+  .twilight.clouds-high.moreclouds {
+    filter: saturate(80%) brightness(50%) contrast(130%); }
+  .twilight.clouds-high.itrains {
+    filter: saturate(70%) brightness(40%) contrast(150%); }
+
+.night.sky {
+  background-image: linear-gradient(to top, rgba(32, 26, 54, 0.6), rgba(12, 12, 14, 0.7)), url("./assets/images/stars.gif");
+  background-size: 70%; }
+  .night.sky.clouds {
+    background-image: linear-gradient(to top, rgba(32, 26, 54, 0.85), #161616), url("./assets/images/stars.gif");
+    background-size: 70%; }
+  .night.sky.moreclouds {
+    background-image: linear-gradient(to top, #262430, #0e0e0e); }
+  .night.sky.itrains {
+    background-image: linear-gradient(to top, #2c2c2d, black); }
+
+.night.hills {
+  filter: saturate(90%) brightness(80%) contrast(100%); }
+  .night.hills.clouds {
+    filter: saturate(50%) brightness(40%) contrast(100%); }
+  .night.hills.moreclouds {
+    filter: saturate(40%) brightness(20%) contrast(110%); }
+  .night.hills.itrains {
+    filter: saturate(30%) brightness(10%) contrast(110%); }
+
+.night.grass {
+  filter: saturate(90%) brightness(60%) contrast(100%); }
+  .night.grass.clouds {
+    filter: saturate(60%) brightness(40%) contrast(110%); }
+  .night.grass.moreclouds {
+    filter: saturate(40%) brightness(20%) contrast(112%); }
+  .night.grass.itrains {
+    filter: saturate(25%) brightness(15%) contrast(115%); }
+
+.night.flower {
+  filter: saturate(70%) brightness(80%) contrast(100%); }
+  .night.flower.clouds {
+    filter: saturate(60%) brightness(35%) contrast(90%); }
+  .night.flower.moreclouds {
+    filter: saturate(40%) brightness(10%) contrast(100%); }
+  .night.flower.itrains {
+    filter: saturate(40%) brightness(8%) contrast(110%); }
+
+.night.cloud {
+  filter: saturate(80%) brightness(80%) contrast(100%); }
+  .night.cloud.clouds {
+    filter: saturate(60%) brightness(50%) contrast(90%); }
+  .night.cloud.moreclouds {
+    filter: saturate(40%) brightness(10%) contrast(100%); }
+  .night.cloud.itrains {
+    filter: saturate(25%) brightness(5%) contrast(130%); }
+
+.night.clouds-high {
+  filter: saturate(90%) brightness(40%) contrast(100%); }
+  .night.clouds-high.clouds {
+    filter: saturate(60%) brightness(30%) contrast(110%); }
+  .night.clouds-high.moreclouds {
+    filter: saturate(100%) brightness(20%) contrast(150%); }
+  .night.clouds-high.itrains {
+    filter: saturate(100%) brightness(5%) contrast(150%); }
+
+.rain {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./assets/images/rain.gif");
+  background-repeat: round; }
+
+.heavyrain {
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./assets/images/heavyRain.gif");
+  background-repeat: round;
+  opacity: 0.5; }
+
+.flower {
+  z-index: 2;
+  width: 200px;
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translate(-50%, 0); }
+  .flower.teste {
+    bottom: 110px; }
+
+.flower--animate {
+  animation-name: bloom;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; }
+
+@keyframes bloom {
+  from {
+    bottom: -200px; }
+  to {
+    bottom: 15%; } }
+
+.rainbow {
+  z-index: 0;
+  position: absolute;
+  bottom: 280px;
+  left: 100px;
+  width: 50%;
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  opacity: 0; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.6; } }
+
+.cloud {
+  z-index: 2;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 30vh;
+  min-width: 160px;
+  max-width: 280px;
+  transform: translate(-50%, 0); }
+
+.clouds-high {
+  z-index: 5;
+  position: absolute;
+  top: -14px;
+  height: 57px;
+  width: 100vw;
+  background-image: url("./assets/images/cloudsTop.png");
+  background-repeat: round no-repeat;
+  background-size: 20%;
+  background-position: bottom; }
+  .clouds-high.teste {
+    top: -20px; }
+
+.sun {
+  z-index: 0;
+  position: absolute;
+  top: 700px;
+  left: 25%;
+  width: 60%;
+  min-width: 160px;
+  max-width: 280px;
+  display: none; }
+  .sun.teste {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  .sun.sunrise {
+    display: block;
+    animation-name: sunrise;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out; }
+  .sun.sunset {
+    display: block;
+    animation-name: sunset;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in; }
+
+@keyframes sunrise {
+  from {
+    top: 600px;
+    /* transform: translate(0, -200px); */ }
+  to {
+    top: 10%; } }
+
+@keyframes sunset {
+  from {
+    top: 10%;
+    /* transform: translate(0, -200px); */ }
+  to {
+    top: -200%; } }

@@ -1,0 +1,10 @@
+.cloud {
+	z-index   : 2;
+	position  : absolute;
+	top       : 20%;
+	left      : 50%;
+	width     : 30vh;
+	min-width : 160px;
+	max-width : 280px;
+	transform : translate(-50%, 0);
+}

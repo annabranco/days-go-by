@@ -1,0 +1,58 @@
+.sun {
+	z-index   : 0;
+	position  : absolute;
+	top       : 700px;
+	left      : 25%;
+	width     : 60%;
+	min-width : 160px;
+	max-width : 280px;
+	display   : none;
+
+	&.teste {
+		top       : 10%;
+		left      : 50%;
+		transform : translate(-50%, 0);
+	}
+
+	&.sunrise {
+		display                   : block;
+		animation-name            : sunrise;
+		animation-duration        : 5s;
+		animation-iteration-count : 1;
+		animation-fill-mode       : forwards;
+		animation-timing-function : ease-out;
+	}
+
+	&.sunset {
+		display                   : block;
+		animation-name            : sunset;
+		animation-duration        : 5s;
+		animation-iteration-count : 1;
+		animation-fill-mode       : forwards;
+		animation-timing-function : ease-in;
+	}
+}
+
+@keyframes sunrise {
+
+	from {
+		top : 600px;
+		/* transform: translate(0, -200px); */
+	}
+
+	to {
+		top : 10%;
+	}
+}
+
+@keyframes sunset {
+
+	from {
+		top : 10%;
+		/* transform: translate(0, -200px); */
+	}
+
+	to {
+		top : -200%;
+	}
+}
