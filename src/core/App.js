@@ -3,16 +3,18 @@ import Background from '../components/background-component/background-component'
 import Controls from '../components/controls-component/controls-component';
 import Rain from '../components/rain-component/rain-component';
 import Flower from '../components/flower-component/flower-component';
+import Rainbow from '../components/rainbow-component/rainbow-component';
 
 class App extends Component {
 	constructor( props ) {
 		super( props );
 
 		this.state = {
-			light  : 'neutral',
-			cloud  : 'noclouds',
-			rain   : 'norain',
-			flower : false,
+			light   : 'neutral',
+			cloud   : 'noclouds',
+			rain    : 'norain',
+			flower  : false,
+			rainbow : false,
 		};
 	}
 
@@ -38,12 +40,17 @@ class App extends Component {
 		this.setState({ flower: !this.state.flower });
 	}
 
+	onTriggerRainbow = () => {
+		this.setState({ rainbow: !this.state.rainbow });
+	}
+
 	render() {
 		const {
 			light,
 			cloud,
 			rain,
 			flower,
+			rainbow,
 		} = this.state;
 
 		const {
@@ -52,6 +59,7 @@ class App extends Component {
 			onChangeClouds,
 			onChangeRain,
 			onTriggerFlower,
+			onTriggerRainbow,
 		} = this;
 
 		return (
@@ -65,7 +73,8 @@ class App extends Component {
 					onChangeLight = { onChangeLight }
 					onChangeClouds = { onChangeClouds }
 					onChangeRain = { onChangeRain }
-					onTriggerFlower = { onTriggerFlower }
+					onTriggerFlower={ onTriggerFlower }
+					onTriggerRainbow={ onTriggerRainbow }
 				/>
 				{ rain !== 'norain' &&
 					<Rain
@@ -75,6 +84,13 @@ class App extends Component {
 				}
 				{ flower &&
 					<Flower
+						light = { light }
+						cloud = { cloud }
+						propsValues = { propsValues }
+					/>
+				}
+				{ rainbow &&
+					<Rainbow
 						light = { light }
 						cloud = { cloud }
 						propsValues = { propsValues }
