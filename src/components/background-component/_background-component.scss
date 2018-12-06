@@ -1,0 +1,44 @@
+body {
+	margin   : 0;
+	height   : 100vh;
+	overflow : hidden;
+}
+
+.sky {
+	position    : relative;
+	align-items : center;
+	padding-top : 30px;
+	height      : 100vh;
+	overflow    : hidden;
+	transition  : background-image 10s ease-in, background-color 10s ease-in;
+}
+
+.hills {
+	z-index  : 1;
+	position : absolute;
+	bottom   : 0;
+	left     : 0;
+	height   : 50vh;
+	width    : 100vw;
+}
+
+.button {
+	margin-right : 500px;
+	width        : 100px;
+	background   : lightgray;
+	border       : 1px solid;
+	box-shadow   : 3px 3px 6px rgba(0, 0, 0, 0.5);
+	font-size    : 1rem;
+	text-align   : center;
+	cursor       : pointer;
+}
+
+.grass {
+	z-index  : 3;
+	position : absolute;
+	bottom   : -15px;
+	left     : -40px;
+	display  : block;
+	width    : 120vw;
+	height   : 35%;
+}

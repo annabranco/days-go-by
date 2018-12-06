@@ -1,2 +1,2 @@
 # days-go-by
-JavaScript and CSS small animation
+React animation project

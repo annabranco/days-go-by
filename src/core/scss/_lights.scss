@@ -1,0 +1,365 @@
+.neutral {
+	&.sky {
+		background-image : linear-gradient(to top, rgba(39, 60, 117, 1), rgba(53, 59, 72,1));
+		background-size  : 60%;
+	}
+
+	&.sun {
+		filter : saturate(100%) brightness(100%) contrast(100%);
+	}
+
+	&.hills {
+		filter : saturate(100%) brightness(100%) contrast(100%);
+	}
+
+	&.grass {
+		filter : saturate(100%) brightness(100%) contrast(100%);
+	}
+
+	&.flower {
+		filter : saturate(100%) brightness(100%) contrast(100%);
+	}
+
+	&.cloud {
+		filter : saturate(100%) brightness(100%) contrast(100%);
+	}
+
+	&.cloudsHigh {
+		filter : saturate(100%) brightness(100%) contrast(100%);
+	}
+
+	&.rainbow {
+		opacity : (100%);
+	}
+}
+
+.day {
+	&.sky {
+		background-size  : 100%;
+		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(0, 168, 255, 0.5));
+		background-color : white;
+
+		&.clouds {
+			background-image : linear-gradient(to top, rgba(79, 109, 189, 1), rgba(80, 91, 115, 1));
+		}
+
+		&.moreclouds {
+			background-image : linear-gradient(to top, rgba(39, 60, 117, 1), rgba(53, 59, 72, 1));
+		}
+
+		&.itrains {
+			background-image : linear-gradient(to top, rgba(53, 59, 72, 0.7), rgba(53, 59, 72, 1));
+			background-color : rgba(39, 60, 117, 1);
+		}
+	}
+
+	&.sun {
+		filter : saturate(100%) brightness(100%) contrast(100%);
+
+		&.clouds {
+			filter : saturate(90%) brightness(80%) contrast(105%);
+		}
+
+		&.moreclouds {
+			filter : saturate(80%) brightness(60%) contrast(110%);
+		}
+
+		&.itrains {
+			filter : saturate(70%) brightness(47%) contrast(115%);
+		}
+	}
+
+	&.hills {
+		filter : saturate(100%) brightness(100%) contrast(150%);
+
+		&.clouds {
+			filter : saturate(90%) brightness(90%) contrast(100%);
+		}
+
+		&.moreclouds {
+			filter : saturate(80%) brightness(80%) contrast(100%);
+		}
+
+		&.itrains {
+			filter : saturate(70%) brightness(70%) contrast(90%);
+		}
+	}
+
+	&.grass {
+		filter : saturate(100%) brightness(100%) contrast(110%);
+
+		&.clouds {
+			filter : saturate(90%) brightness(90%) contrast(110%);
+		}
+
+		&.moreclouds {
+			filter : saturate(80%) brightness(80%) contrast(110%);
+		}
+
+		&.itrains {
+			filter : saturate(70%) brightness(70%) contrast(110%);
+		}
+	}
+
+	&.flower {
+		filter : saturate(100%) brightness(100%) contrast(110%);
+
+		&.clouds {
+			filter : saturate(90%) brightness(90%) contrast(110%);
+		}
+
+		&.moreclouds {
+			filter : saturate(80%) brightness(80%) contrast(110%);
+		}
+
+		&.itrains {
+			filter : saturate(70%) brightness(70%) contrast(110%);
+		}
+	}
+
+	&.cloud {
+		filter : saturate(100%) brightness(100%) contrast(110%);
+
+		&.clouds {
+			filter : saturate(100%) brightness(100%) contrast(110%);
+		}
+
+		&.moreclouds {
+			filter : saturate(80%) brightness(80%) contrast(110%);
+		}
+
+		&.itrains {
+			filter : saturate(70%) brightness(70%) contrast(120%);
+		}
+	}
+
+	&.clouds-high {
+		filter : saturate(100%) brightness(100%) contrast(100%);
+
+		&.clouds {
+			filter : saturate(90%) brightness(90%) contrast(120%);
+		}
+
+		&.moreclouds {
+			filter : saturate(80%) brightness(70%) contrast(130%);
+		}
+
+		&.itrains {
+			filter : saturate(50%) brightness(50%) contrast(140%);
+		}
+	}
+
+	&.rainbow {
+		opacity : 1;
+
+		&.clouds {
+			opacity : 0.7;
+		}
+
+		&.moreclouds {
+			opacity : 0.3;
+		}
+
+		&.itrains {
+			opacity : 0.2;
+		}
+	}
+}
+
+.twilight {
+	&.sky {
+		background-image : linear-gradient(to top, rgba(46, 71, 139, 1), rgba(24, 24, 43, 1));
+
+		&.clouds {
+			background-image : linear-gradient(to top, rgba(70, 80, 106, 1), rgba(33, 33, 40, 1));
+		}
+
+		&.moreclouds {
+			background-image : linear-gradient(to top, rgba(70, 80, 106, 1), rgba(31, 31, 36, 1));
+		}
+
+		&.itrains {
+			background-image : linear-gradient(to top, rgba(70, 80, 106, 1), rgba(27, 27, 29, 1));
+		}
+	}
+
+	&.hills {
+		filter : saturate(90%) brightness(70%) contrast(100%);
+
+		&.clouds {
+			filter : saturate(80%) brightness(60%) contrast(100%);
+		}
+
+		&.moreclouds {
+			filter : saturate(70%) brightness(50%) contrast(100%);
+		}
+
+		&.itrains {
+			filter : saturate(60%) brightness(40%) contrast(100%);
+		}
+	}
+
+	&.grass {
+		filter : saturate(90%) brightness(80%) contrast(100%);
+
+		&.clouds {
+			filter : saturate(90%) brightness(70%) contrast(100%);
+		}
+
+		&.moreclouds {
+			filter : saturate(80%) brightness(60%) contrast(100%);
+		}
+
+		&.itrains {
+			filter : saturate(70%) brightness(50%) contrast(100%);
+		}
+	}
+
+	&.flower {
+		filter : saturate(90%) brightness(80%) contrast(110%);
+
+		&.clouds {
+			filter : saturate(90%) brightness(70%) contrast(110%);
+		}
+
+		&.moreclouds {
+			filter : saturate(80%) brightness(60%) contrast(110%);
+		}
+
+		&.itrains {
+			filter : saturate(70%) brightness(50%) contrast(110%);
+		}
+	}
+
+	&.cloud {
+		filter : saturate(90%) brightness(80%) contrast(100%);
+
+		&.clouds {
+			filter : saturate(90%) brightness(70%) contrast(120%);
+		}
+
+		&.moreclouds {
+			filter : saturate(80%) brightness(60%) contrast(130%);
+		}
+
+		&.itrains {
+			filter : saturate(70%) brightness(40%) contrast(130%);
+		}
+	}
+
+	&.clouds-high {
+		filter : saturate(90%) brightness(70%) contrast(100%);
+
+		&.clouds {
+			filter : saturate(90%) brightness(60%) contrast(110%);
+		}
+
+		&.moreclouds {
+			filter : saturate(80%) brightness(50%) contrast(130%);
+		}
+
+		&.itrains {
+			filter : saturate(70%) brightness(40%) contrast(150%);
+		}
+	}
+}
+
+.night {
+	&.sky {
+		background-image : linear-gradient(to top, rgba(32, 26, 54, 0.6), rgba(12, 12, 14, 0.7)), url('./assets/images/stars.gif');
+		background-size  : 70%;
+
+		&.clouds {
+			background-image : linear-gradient(to top, rgba(32, 26, 54, 0.85), rgba(22, 22, 22, 1)), url('./assets/images/stars.gif');
+			background-size  : 70%;
+		}
+
+		&.moreclouds {
+			background-image : linear-gradient(to top, rgba(38, 36, 48, 1), rgba(14, 14, 14, 1));
+		}
+
+		&.itrains {
+			background-image : linear-gradient(to top, rgba(44, 44, 45, 1), rgba(0, 0, 0, 1));
+		}
+	}
+
+	&.hills {
+		filter : saturate(90%) brightness(80%) contrast(100%);
+
+		&.clouds {
+			filter : saturate(50%) brightness(40%) contrast(100%);
+		}
+
+		&.moreclouds {
+			filter : saturate(40%) brightness(20%) contrast(110%);
+		}
+
+		&.itrains {
+			filter : saturate(30%) brightness(10%) contrast(110%);
+		}
+	}
+
+	&.grass {
+		filter : saturate(90%) brightness(60%) contrast(100%);
+
+		&.clouds {
+			filter : saturate(60%) brightness(40%) contrast(110%);
+		}
+
+		&.moreclouds {
+			filter : saturate(40%) brightness(20%) contrast(112%);
+		}
+
+		&.itrains {
+			filter : saturate(25%) brightness(15%) contrast(115%);
+		}
+	}
+
+	&.flower {
+		filter : saturate(70%) brightness(80%) contrast(100%);
+
+		&.clouds {
+			filter : saturate(60%) brightness(35%) contrast(90%);
+		}
+
+		&.moreclouds {
+			filter : saturate(40%) brightness(10%) contrast(100%);
+		}
+
+		&.itrains {
+			filter : saturate(40%) brightness(8%) contrast(110%);
+		}
+	}
+
+	&.cloud {
+		filter : saturate(80%) brightness(80%) contrast(100%);
+
+		&.clouds {
+			filter : saturate(60%) brightness(50%) contrast(90%);
+		}
+
+		&.moreclouds {
+			filter : saturate(40%) brightness(10%) contrast(100%);
+		}
+
+		&.itrains {
+			filter : saturate(25%) brightness(5%) contrast(130%);
+		}
+	}
+
+	&.clouds-high {
+		filter : saturate(90%) brightness(40%) contrast(100%);
+
+		&.clouds {
+			filter : saturate(60%) brightness(30%) contrast(110%);
+		}
+
+		&.moreclouds {
+			filter : saturate(100%) brightness(20%) contrast(150%);
+		}
+
+		&.itrains {
+			filter : saturate(100%) brightness(5%) contrast(150%);
+		}
+	}
+}

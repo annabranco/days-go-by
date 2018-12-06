@@ -1,0 +1,36 @@
+.teste-console {
+	z-index               : 10;
+	position              : absolute;
+	right                 : 5px;
+	bottom                : 15%;
+	display               : grid;
+	grid-template-columns : repeat(2, 80px);
+	grid-gap              : 2px;
+	// display              : none;
+
+	@media all and ( min-width: 768px ) {
+		z-index               : 10;
+		position              : absolute;
+		right                 : 5px;
+		bottom                : 10%;
+		display               : grid;
+		grid-template-columns : repeat(4, 80px);
+		grid-gap              : 5px;
+		// display              : none;
+	}
+}
+
+.teste-buttom {
+	background-image : linear-gradient(to bottom, #ced2d6, #caecf1);
+	cursor           : pointer;
+	font-family      : sans-serif;
+}
+
+.teste-title {
+	text-align  : center;
+	background  : rgba(yellow, 0.5);
+	grid-column : span 4;
+	font-size   : 0.8rem;
+	font-weight : 700;
+	font-family : sans-serif;
+}
