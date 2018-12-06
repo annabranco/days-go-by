@@ -37,22 +37,3 @@
 		top : -200%;
 	}
 }
-
-.flower--animate {
-	animation-name            : bloom;
-	animation-duration        : 8s;
-	animation-iteration-count : 1;
-	animation-fill-mode       : forwards;
-
-}
-
-@keyframes bloom {
-
-	from {
-		bottom : -200px;
-	}
-
-	to {
-		bottom : 15%;
-	}
-}

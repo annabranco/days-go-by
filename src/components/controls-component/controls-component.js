@@ -5,12 +5,14 @@ const Controls = ({
 	onChangeLight,
 	onChangeClouds,
 	onChangeRain,
+	onTriggerFlower,
 }) => {
 
 	Controls.propTypes = {
-		onChangeLight  : PropTypes.func.isRequired,
-		onChangeClouds : PropTypes.func.isRequired,
-		onChangeRain   : PropTypes.func.isRequired,
+		onChangeLight   : PropTypes.func.isRequired,
+		onChangeClouds  : PropTypes.func.isRequired,
+		onChangeRain    : PropTypes.func.isRequired,
+		onTriggerFlower : PropTypes.func.isRequired,
 	};
 
 	return (
@@ -35,7 +37,7 @@ const Controls = ({
 			<button className="teste-buttom teste10">cloudsHigh</button>
 			<button className="teste-buttom teste11">cloud</button>
 			<p className="teste-title">Events Controls</p>
-			<button className="teste-buttom teste13">flower</button>
+			<button className="teste-buttom" onClick={ () => onTriggerFlower() }>flower</button>
 			<button className="teste-buttom teste15">rainbow</button>
 		</div>
 	);

@@ -100,17 +100,6 @@ body {
   width: 120vw;
   height: 35%; }
 
-.flower {
-  z-index: 2;
-  width: 200px;
-  position: absolute;
-  bottom: -200px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  display: none; }
-  .flower.teste {
-    bottom: 110px; }
-
 .teste-console {
   z-index: 10;
   position: absolute;
@@ -371,6 +360,28 @@ body {
   background-repeat: round;
   opacity: 0.5; }
 
+.flower {
+  z-index: 2;
+  width: 200px;
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translate(-50%, 0); }
+  .flower.teste {
+    bottom: 110px; }
+
+.flower--animate {
+  animation-name: bloom;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; }
+
+@keyframes bloom {
+  from {
+    bottom: -200px; }
+  to {
+    bottom: 15%; } }
+
 .sun--rise {
   animation-name: sunrise;
   animation-duration: 5s;
@@ -398,15 +409,3 @@ body {
     /* transform: translate(0, -200px); */ }
   to {
     top: -200%; } }
-
-.flower--animate {
-  animation-name: bloom;
-  animation-duration: 8s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards; }
-
-@keyframes bloom {
-  from {
-    bottom: -200px; }
-  to {
-    bottom: 15%; } }

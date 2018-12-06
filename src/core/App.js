@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 import Background from '../components/background-component/background-component';
 import Controls from '../components/controls-component/controls-component';
 import Rain from '../components/rain-component/rain-component';
+import Flower from '../components/flower-component/flower-component';
 
 class App extends Component {
 	constructor( props ) {
 		super( props );
 
 		this.state = {
-			light : 'neutral',
-			cloud : 'noclouds',
-			rain  : 'norain',
+			light  : 'neutral',
+			cloud  : 'noclouds',
+			rain   : 'norain',
+			flower : false,
 		};
 	}
 
@@ -32,11 +34,16 @@ class App extends Component {
 		this.setState({ rain });
 	}
 
+	onTriggerFlower = () => {
+		this.setState({ flower: !this.state.flower });
+	}
+
 	render() {
 		const {
 			light,
 			cloud,
 			rain,
+			flower,
 		} = this.state;
 
 		const {
@@ -44,6 +51,7 @@ class App extends Component {
 			onChangeLight,
 			onChangeClouds,
 			onChangeRain,
+			onTriggerFlower,
 		} = this;
 
 		return (
@@ -57,10 +65,18 @@ class App extends Component {
 					onChangeLight = { onChangeLight }
 					onChangeClouds = { onChangeClouds }
 					onChangeRain = { onChangeRain }
+					onTriggerFlower = { onTriggerFlower }
 				/>
 				{ rain !== 'norain' &&
 					<Rain
-						rain = { rain }
+						rain={ rain }
+						propsValues={ propsValues }
+					/>
+				}
+				{ flower &&
+					<Flower
+						light = { light }
+						cloud = { cloud }
 						propsValues = { propsValues }
 					/>
 				}
