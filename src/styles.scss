@@ -1,7 +1,9 @@
-@import 'core/reset';
+@import 'core/scss/reset';
 
-@import 'core/variables';
+@import 'core/scss/variables';
 
 @import 'components/background-component/background-component';
 
-@import 'core/helpers';
+@import 'core/scss/lights';
+
+@import 'core/scss/helpers';
