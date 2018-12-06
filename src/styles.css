@@ -19,6 +19,24 @@ time, mark, audio, video {
   vertical-align: baseline;
   box-sizing: border-box; }
 
+.version {
+  font-family: sans-serif;
+  z-index: 10;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 0.7rem;
+  color: white; }
+
+.author {
+  font-family: sans-serif;
+  z-index: 10;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-size: 0.7rem;
+  color: white; }
+
 body {
   margin: 0;
   height: 100vh;
