@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import Background from '../components/background-component/background-component';
 
 class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				DAYS GO BY
+				<Background />
 			</div>
 		);
 	}

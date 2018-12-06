@@ -1,0 +1,130 @@
+body {
+	margin : 0;
+	height : 100vh;
+}
+
+.sky {
+	position    : relative;
+	align-items : center;
+	padding-top : 30px;
+	height      : 100%;
+	overflow    : hidden;
+	transition  : background-image 10s ease-in, background-color 10s ease-in;
+}
+
+.hills {
+	z-index  : 1;
+	position : absolute;
+	bottom   : 0;
+	left     : 0;
+	height   : 50vh;
+	width    : 100vw;
+}
+
+.clouds-high {
+	z-index             : 5;
+	position            : absolute;
+	top                 : -50px;
+	height              : 57px;
+	width               : 100vw;
+	background-image    : url('./assets/images/cloudsTop.png');
+	background-repeat   : round no-repeat;
+	background-size     : 20%;
+	background-position : bottom;
+	display             : none;
+
+	&.teste {
+		top : -20px;
+	}
+}
+
+.cloud {
+	z-index   : 2;
+	position  : absolute;
+	top       : 20%;
+	left      : 50%;
+	width     : 30vh;
+	min-width : 160px;
+	max-width : 280px;
+	transform : translate(-50%, 0);
+	display   : none;
+}
+
+.sun {
+	z-index   : 0;
+	position  : absolute;
+	top       : 700px;
+	left      : 25%;
+	width     : 60%;
+	min-width : 160px;
+	max-width : 280px;
+	display   : none;
+
+	&.teste {
+		top       : 10%;
+		left      : 50%;
+		transform : translate(-50%, 0);
+	}
+}
+
+.rainbow {
+	display : none;
+}
+
+.rain {
+	z-index           : 3;
+	position          : absolute;
+	top               : 0;
+	height            : 100vh;
+	width             : 100vw;
+	background-image  : url('./assets/images/rain.gif');
+	background-repeat : round;
+	display           : none;
+}
+
+.heavyRain {
+	z-index           : 4;
+	position          : absolute;
+	top               : 0;
+	height            : 100vh;
+	width             : 100vw;
+	background-image  : url('./assets/images/heavyRain.gif');
+	background-repeat : round;
+	display           : none;
+	opacity           : 0.5;
+}
+
+.button {
+	margin-right : 500px;
+	width        : 100px;
+	background   : lightgray;
+	border       : 1px solid;
+	box-shadow   : 3px 3px 6px rgba(0, 0, 0, 0.5);
+	font-size    : 1rem;
+	text-align   : center;
+	cursor       : pointer;
+}
+
+.grass {
+	z-index  : 3;
+	position : absolute;
+	bottom   : -15px;
+	left     : -40px;
+	display  : block;
+	width    : 120vw;
+	height   : 35%;
+}
+
+.flower {
+	z-index   : 2;
+	width     : 200px;
+	position  : absolute;
+	bottom    : -200px;
+	left      : 50%;
+	transform : translate(-50%, 0);
+	display   : none;
+
+	&.teste {
+		bottom : 110px;
+	}
+}
