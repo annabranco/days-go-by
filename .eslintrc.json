@@ -167,7 +167,7 @@
         "ignoreStrings"          : true,
         "ignoreTemplateLiterals" : true
       }],
-    "max-lines-per-function"           : ["warn", {"max": 70, "skipBlankLines": true, "skipComments": true }],
+    "max-lines-per-function"           : ["warn", {"max": 120, "skipBlankLines": true, "skipComments": true }],
     "max-params"                       : ["error", 4],
     "multiline-ternary"                : ["error", "always-multiline"],
     "new-parens"                       : "error",

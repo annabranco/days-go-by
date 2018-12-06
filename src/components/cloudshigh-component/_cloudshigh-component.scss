@@ -1,0 +1,15 @@
+.clouds-high {
+	z-index             : 5;
+	position            : absolute;
+	top                 : -14px;
+	height              : 57px;
+	width               : 100vw;
+	background-image    : url('./assets/images/cloudsTop.png');
+	background-repeat   : round no-repeat;
+	background-size     : 20%;
+	background-position : bottom;
+
+	&.teste {
+		top : -20px;
+	}
+}

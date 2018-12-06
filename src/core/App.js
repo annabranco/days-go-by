@@ -4,17 +4,21 @@ import Controls from '../components/controls-component/controls-component';
 import Rain from '../components/rain-component/rain-component';
 import Flower from '../components/flower-component/flower-component';
 import Rainbow from '../components/rainbow-component/rainbow-component';
+import Cloud from '../components/cloud-component/cloud-component';
+import CloudsHigh from '../components/cloudshigh-component/cloudshigh-component';
 
 class App extends Component {
 	constructor( props ) {
 		super( props );
 
 		this.state = {
-			light   : 'neutral',
-			cloud   : 'noclouds',
-			rain    : 'norain',
-			flower  : false,
-			rainbow : false,
+			light     : 'neutral',
+			cloud     : 'noclouds',
+			rain      : 'norain',
+			flower    : false,
+			rainbow   : false,
+			lowcloud  : false,
+			highcloud : false,
 		};
 	}
 
@@ -44,6 +48,14 @@ class App extends Component {
 		this.setState({ rainbow: !this.state.rainbow });
 	}
 
+	onTriggerLowCloud = () => {
+		this.setState({ lowcloud: !this.state.lowcloud });
+	}
+
+	onTriggerHighCloud = () => {
+		this.setState({ highcloud: !this.state.highcloud });
+	}
+
 	render() {
 		const {
 			light,
@@ -51,6 +63,8 @@ class App extends Component {
 			rain,
 			flower,
 			rainbow,
+			lowcloud,
+			highcloud,
 		} = this.state;
 
 		const {
@@ -60,6 +74,8 @@ class App extends Component {
 			onChangeRain,
 			onTriggerFlower,
 			onTriggerRainbow,
+			onTriggerLowCloud,
+			onTriggerHighCloud,
 		} = this;
 
 		return (
@@ -73,8 +89,10 @@ class App extends Component {
 					onChangeLight = { onChangeLight }
 					onChangeClouds = { onChangeClouds }
 					onChangeRain = { onChangeRain }
-					onTriggerFlower={ onTriggerFlower }
-					onTriggerRainbow={ onTriggerRainbow }
+					onTriggerFlower = { onTriggerFlower }
+					onTriggerRainbow = { onTriggerRainbow }
+					onTriggerLowCloud = { onTriggerLowCloud }
+					onTriggerHighCloud = { onTriggerHighCloud }
 				/>
 				{ rain !== 'norain' &&
 					<Rain
@@ -91,6 +109,20 @@ class App extends Component {
 				}
 				{ rainbow &&
 					<Rainbow
+						light = { light }
+						cloud = { cloud }
+						propsValues = { propsValues }
+					/>
+				}
+				{ lowcloud &&
+					<Cloud
+						light = { light }
+						cloud = { cloud }
+						propsValues = { propsValues }
+					/>
+				}
+				{ highcloud &&
+					<CloudsHigh
 						light = { light }
 						cloud = { cloud }
 						propsValues = { propsValues }

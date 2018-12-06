@@ -39,31 +39,6 @@ body {
   height: 50vh;
   width: 100vw; }
 
-.clouds-high {
-  z-index: 5;
-  position: absolute;
-  top: -50px;
-  height: 57px;
-  width: 100vw;
-  background-image: url("./assets/images/cloudsTop.png");
-  background-repeat: round no-repeat;
-  background-size: 20%;
-  background-position: bottom;
-  display: none; }
-  .clouds-high.teste {
-    top: -20px; }
-
-.cloud {
-  z-index: 2;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  width: 30vh;
-  min-width: 160px;
-  max-width: 280px;
-  transform: translate(-50%, 0);
-  display: none; }
-
 .sun {
   z-index: 0;
   position: absolute;
@@ -395,6 +370,29 @@ body {
     opacity: 0; }
   to {
     opacity: 1; } }
+
+.cloud {
+  z-index: 2;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 30vh;
+  min-width: 160px;
+  max-width: 280px;
+  transform: translate(-50%, 0); }
+
+.clouds-high {
+  z-index: 5;
+  position: absolute;
+  top: -14px;
+  height: 57px;
+  width: 100vw;
+  background-image: url("./assets/images/cloudsTop.png");
+  background-repeat: round no-repeat;
+  background-size: 20%;
+  background-position: bottom; }
+  .clouds-high.teste {
+    top: -20px; }
 
 .sun--rise {
   animation-name: sunrise;

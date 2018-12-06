@@ -7,14 +7,18 @@ const Controls = ({
 	onChangeRain,
 	onTriggerFlower,
 	onTriggerRainbow,
+	onTriggerLowCloud,
+	onTriggerHighCloud,
 }) => {
 
 	Controls.propTypes = {
-		onChangeLight    : PropTypes.func.isRequired,
-		onChangeClouds   : PropTypes.func.isRequired,
-		onChangeRain     : PropTypes.func.isRequired,
-		onTriggerFlower  : PropTypes.func.isRequired,
-		onTriggerRainbow : PropTypes.func.isRequired,
+		onChangeLight      : PropTypes.func.isRequired,
+		onChangeClouds     : PropTypes.func.isRequired,
+		onChangeRain       : PropTypes.func.isRequired,
+		onTriggerFlower    : PropTypes.func.isRequired,
+		onTriggerRainbow   : PropTypes.func.isRequired,
+		onTriggerLowCloud  : PropTypes.func.isRequired,
+		onTriggerHighCloud : PropTypes.func.isRequired,
 	};
 
 	return (
@@ -36,8 +40,8 @@ const Controls = ({
 			<button className="teste-buttom" onClick={ () => onChangeRain( 'heavyrain' ) }>heavyrain</button>
 			<p className="teste-title">Atmosphere Controls</p>
 			<button className="teste-buttom teste09">sun</button>
-			<button className="teste-buttom teste10">cloudsHigh</button>
-			<button className="teste-buttom teste11">cloud</button>
+			<button className="teste-buttom" onClick={ () => onTriggerHighCloud() }>cloudshigh</button>
+			<button className="teste-buttom" onClick={ () => onTriggerLowCloud() }>cloud</button>
 			<p className="teste-title">Events Controls</p>
 			<button className="teste-buttom" onClick={ () => onTriggerFlower() }>flower</button>
 			<button className="teste-buttom" onClick={ () => onTriggerRainbow() }>rainbow</button>
