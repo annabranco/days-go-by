@@ -16,7 +16,7 @@ const Background = ({
 	};
 
 	return (
-		<div className="scenario">
+		<div className="fixed-elements">
 			<div className={`sky ${ light } ${ cloud }`}></div>
 			<img className={`hills ${ light } ${ cloud }`} src={ hills } alt="hills" />
 			<img className={`grass ${ light } ${ cloud }`} src={ grass } alt="grass" />

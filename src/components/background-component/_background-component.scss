@@ -1,6 +1,7 @@
 body {
-	margin : 0;
-	height : 100vh;
+	margin   : 0;
+	height   : 100vh;
+	overflow : hidden;
 }
 
 .sky {
@@ -19,23 +20,6 @@ body {
 	left     : 0;
 	height   : 50vh;
 	width    : 100vw;
-}
-
-.sun {
-	z-index   : 0;
-	position  : absolute;
-	top       : 700px;
-	left      : 25%;
-	width     : 60%;
-	min-width : 160px;
-	max-width : 280px;
-	display   : none;
-
-	&.teste {
-		top       : 10%;
-		left      : 50%;
-		transform : translate(-50%, 0);
-	}
 }
 
 .button {

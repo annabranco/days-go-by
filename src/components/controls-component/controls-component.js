@@ -7,18 +7,18 @@ const Controls = ({
 	onChangeRain,
 	onTriggerFlower,
 	onTriggerRainbow,
-	onTriggerLowCloud,
-	onTriggerHighCloud,
+	onTriggerClouds,
+	onTriggerSun,
 }) => {
 
 	Controls.propTypes = {
-		onChangeLight      : PropTypes.func.isRequired,
-		onChangeClouds     : PropTypes.func.isRequired,
-		onChangeRain       : PropTypes.func.isRequired,
-		onTriggerFlower    : PropTypes.func.isRequired,
-		onTriggerRainbow   : PropTypes.func.isRequired,
-		onTriggerLowCloud  : PropTypes.func.isRequired,
-		onTriggerHighCloud : PropTypes.func.isRequired,
+		onChangeLight    : PropTypes.func.isRequired,
+		onChangeClouds   : PropTypes.func.isRequired,
+		onChangeRain     : PropTypes.func.isRequired,
+		onTriggerFlower  : PropTypes.func.isRequired,
+		onTriggerRainbow : PropTypes.func.isRequired,
+		onTriggerClouds  : PropTypes.func.isRequired,
+		onTriggerSun     : PropTypes.func.isRequired,
 	};
 
 	return (
@@ -39,10 +39,11 @@ const Controls = ({
 			<button className="teste-buttom" onClick={ () => onChangeRain( 'rain' ) }>rain</button>
 			<button className="teste-buttom" onClick={ () => onChangeRain( 'heavyrain' ) }>heavyrain</button>
 			<p className="teste-title">Atmosphere Controls</p>
-			<button className="teste-buttom teste09">sun</button>
-			<button className="teste-buttom" onClick={ () => onTriggerHighCloud() }>cloudshigh</button>
-			<button className="teste-buttom" onClick={ () => onTriggerLowCloud() }>cloud</button>
+			<button className="teste-buttom" onClick={ () => onTriggerClouds( 'noclouds' ) }>noclouds</button>
+			<button className="teste-buttom" onClick={ () => onTriggerClouds( 'highclouds' ) }>highclouds</button>
+			<button className="teste-buttom" onClick={ () => onTriggerClouds( 'lowcloud' ) }>lowcloud</button>
 			<p className="teste-title">Events Controls</p>
+			<button className="teste-buttom" onClick={ () => onTriggerSun() }>sun</button>
 			<button className="teste-buttom" onClick={ () => onTriggerFlower() }>flower</button>
 			<button className="teste-buttom" onClick={ () => onTriggerRainbow() }>rainbow</button>
 		</div>

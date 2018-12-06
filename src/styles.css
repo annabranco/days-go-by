@@ -21,7 +21,8 @@ time, mark, audio, video {
 
 body {
   margin: 0;
-  height: 100vh; }
+  height: 100vh;
+  overflow: hidden; }
 
 .sky {
   position: relative;
@@ -38,20 +39,6 @@ body {
   left: 0;
   height: 50vh;
   width: 100vw; }
-
-.sun {
-  z-index: 0;
-  position: absolute;
-  top: 700px;
-  left: 25%;
-  width: 60%;
-  min-width: 160px;
-  max-width: 280px;
-  display: none; }
-  .sun.teste {
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, 0); }
 
 .button {
   margin-right: 500px;
@@ -369,7 +356,7 @@ body {
   from {
     opacity: 0; }
   to {
-    opacity: 1; } }
+    opacity: 0.6; } }
 
 .cloud {
   z-index: 2;
@@ -394,12 +381,33 @@ body {
   .clouds-high.teste {
     top: -20px; }
 
-.sun--rise {
-  animation-name: sunrise;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out; }
+.sun {
+  z-index: 0;
+  position: absolute;
+  top: 700px;
+  left: 25%;
+  width: 60%;
+  min-width: 160px;
+  max-width: 280px;
+  display: none; }
+  .sun.teste {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  .sun.sunrise {
+    display: block;
+    animation-name: sunrise;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out; }
+  .sun.sunset {
+    display: block;
+    animation-name: sunset;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in; }
 
 @keyframes sunrise {
   from {
@@ -407,13 +415,6 @@ body {
     /* transform: translate(0, -200px); */ }
   to {
     top: 10%; } }
-
-.sun--set {
-  animation-name: sunset;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in; }
 
 @keyframes sunset {
   from {
