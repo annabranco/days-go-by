@@ -115,7 +115,7 @@
     "func-style"                 : ["error", "declaration", { "allowArrowFunctions": true }],
     "function-paren-newline"     : ["error", "multiline"],
     "id-length"                  : ["error", {
-        "min"        : 5,
+        "min"        : 4,
         "properties" : "never",
         "exceptions" : ["i", "a", "b", "x", "y", "App"]
       }],
@@ -167,7 +167,7 @@
         "ignoreStrings"          : true,
         "ignoreTemplateLiterals" : true
       }],
-    "max-lines-per-function"           : ["warn", {"max": 35, "skipBlankLines": true, "skipComments": true }],
+    "max-lines-per-function"           : ["warn", {"max": 70, "skipBlankLines": true, "skipComments": true }],
     "max-params"                       : ["error", 4],
     "multiline-ternary"                : ["error", "always-multiline"],
     "new-parens"                       : "error",

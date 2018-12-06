@@ -56,36 +56,3 @@
 		bottom : 15%;
 	}
 }
-
-.teste-console {
-	z-index               : 10;
-	position              : absolute;
-	right                 : 5px;
-	bottom                : 15%;
-	display               : grid;
-	grid-template-columns : repeat(2, 80px);
-	grid-gap              : 2px;
-	// display              : none;
-
-	@media all and ( min-width: 768px ) {
-		z-index               : 10;
-		position              : absolute;
-		right                 : 5px;
-		bottom                : 10%;
-		display               : grid;
-		grid-template-columns : repeat(5, 80px);
-		grid-gap              : 5px;
-		// display              : none;
-	}
-}
-
-.teste-buttom {
-	background-image : linear-gradient(to bottom, #ced2d6, #caecf1);
-	cursor           : pointer;
-}
-
-.teste01,
-.teste05,
-.teste09 {
-	grid-column : span 2;
-}
