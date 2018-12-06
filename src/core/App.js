@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Background from '../components/background-component/background-component';
 import Controls from '../components/controls-component/controls-component';
+import Rain from '../components/rain-component/rain-component';
 
 class App extends Component {
 	constructor( props ) {
@@ -35,6 +36,7 @@ class App extends Component {
 		const {
 			light,
 			cloud,
+			rain,
 		} = this.state;
 
 		const {
@@ -56,6 +58,12 @@ class App extends Component {
 					onChangeClouds = { onChangeClouds }
 					onChangeRain = { onChangeRain }
 				/>
+				{ rain !== 'norain' &&
+					<Rain
+						rain = { rain }
+						propsValues = { propsValues }
+					/>
+				}
 			</div>
 		);
 	}

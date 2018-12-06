@@ -81,27 +81,6 @@ body {
 .rainbow {
   display: none; }
 
-.rain {
-  z-index: 3;
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  background-image: url("./assets/images/rain.gif");
-  background-repeat: round;
-  display: none; }
-
-.heavyRain {
-  z-index: 4;
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  background-image: url("./assets/images/heavyRain.gif");
-  background-repeat: round;
-  display: none;
-  opacity: 0.5; }
-
 .button {
   margin-right: 500px;
   width: 100px;
@@ -372,6 +351,25 @@ body {
     filter: saturate(100%) brightness(20%) contrast(150%); }
   .night.clouds-high.itrains {
     filter: saturate(100%) brightness(5%) contrast(150%); }
+
+.rain {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./assets/images/rain.gif");
+  background-repeat: round; }
+
+.heavyrain {
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./assets/images/heavyRain.gif");
+  background-repeat: round;
+  opacity: 0.5; }
 
 .sun--rise {
   animation-name: sunrise;

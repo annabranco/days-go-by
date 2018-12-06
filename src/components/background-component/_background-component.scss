@@ -71,29 +71,6 @@ body {
 	display : none;
 }
 
-.rain {
-	z-index           : 3;
-	position          : absolute;
-	top               : 0;
-	height            : 100vh;
-	width             : 100vw;
-	background-image  : url('./assets/images/rain.gif');
-	background-repeat : round;
-	display           : none;
-}
-
-.heavyRain {
-	z-index           : 4;
-	position          : absolute;
-	top               : 0;
-	height            : 100vh;
-	width             : 100vw;
-	background-image  : url('./assets/images/heavyRain.gif');
-	background-repeat : round;
-	display           : none;
-	opacity           : 0.5;
-}
-
 .button {
 	margin-right : 500px;
 	width        : 100px;

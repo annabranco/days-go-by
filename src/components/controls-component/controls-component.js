@@ -29,7 +29,7 @@ const Controls = ({
 			<p className="teste-title">Rain Controls</p>
 			<button className="teste-buttom" onClick={ () => onChangeRain( 'norain' ) }>norain</button>
 			<button className="teste-buttom" onClick={ () => onChangeRain( 'rain' ) }>rain</button>
-			<button className="teste-buttom" onClick={ () => onChangeRain( 'heavyRain' ) }>heavyRain</button>
+			<button className="teste-buttom" onClick={ () => onChangeRain( 'heavyrain' ) }>heavyrain</button>
 			<p className="teste-title">Atmosphere Controls</p>
 			<button className="teste-buttom teste09">sun</button>
 			<button className="teste-buttom teste10">cloudsHigh</button>
