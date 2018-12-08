@@ -5,31 +5,31 @@
 	}
 
 	&.sun {
-		transition : 2s ease;
+		transition : 8s ease;
 	}
 
 	&.hills {
-		transition : 2s ease;
+		transition : 8s ease;
 	}
 
 	&.grass {
-		transition : 2s ease;
+		transition : 8s ease;
 	}
 
 	&.flower {
-		transition : 2s ease;
+		transition : 8s ease;
 	}
 
 	&.cloud {
-		transition : 2s ease;
+		transition : 8s ease;
 	}
 
 	&.cloudsHigh {
-		transition : 2s ease;
+		transition : 8s ease;
 	}
 
 	&.rainbow {
-		transition : 2s ease;
+		transition : 8s ease;
 	}
 }
 
@@ -305,7 +305,7 @@
 .afternoon {
 	&.sky {
 		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(16, 36, 124, 0.3), rgba(14, 28, 90, 0.3));
-		background-color : rgb(24, 9, 24);
+		background-color : rgb(40, 19, 54);
 
 		&.clouds {
 			background-image : linear-gradient(to top, rgba(70, 80, 106, 1), rgba(33, 33, 40, 1));

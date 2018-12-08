@@ -150,25 +150,25 @@ path {
   transition: background-image 2s ease-in, background-color 8s ease-in; }
 
 .neutral.sun, .morning.sun, .day.sun, .afternoon.sun, .night.sun {
-  transition: 2s ease; }
+  transition: 8s ease; }
 
 .neutral.hills, .morning.hills, .day.hills, .afternoon.hills, .night.hills {
-  transition: 2s ease; }
+  transition: 8s ease; }
 
 .neutral.grass, .morning.grass, .day.grass, .afternoon.grass, .night.grass {
-  transition: 2s ease; }
+  transition: 8s ease; }
 
 .neutral.flower, .morning.flower, .day.flower, .afternoon.flower, .night.flower {
-  transition: 2s ease; }
+  transition: 8s ease; }
 
 .neutral.cloud, .morning.cloud, .day.cloud, .afternoon.cloud, .night.cloud {
-  transition: 2s ease; }
+  transition: 8s ease; }
 
 .neutral.cloudsHigh, .morning.cloudsHigh, .day.cloudsHigh, .afternoon.cloudsHigh, .night.cloudsHigh {
-  transition: 2s ease; }
+  transition: 8s ease; }
 
 .neutral.rainbow, .morning.rainbow, .day.rainbow, .afternoon.rainbow, .night.rainbow {
-  transition: 2s ease; }
+  transition: 8s ease; }
 
 .neutral.sky {
   background-image: linear-gradient(to top, rgba(255, 255, 0, 0.2), rgba(255, 187, 0, 0.2), rgba(2, 118, 175, 0.2), rgba(4, 35, 173, 0.2));
@@ -328,7 +328,7 @@ path {
 
 .afternoon.sky {
   background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(16, 36, 124, 0.3), rgba(14, 28, 90, 0.3));
-  background-color: #180918; }
+  background-color: #281336; }
   .afternoon.sky.clouds {
     background-image: linear-gradient(to top, #46506a, #212128); }
   .afternoon.sky.moreclouds {
