@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Stars = () => {
+const Stars = ({
+	cloud, propsValues,
+}) => {
 
 	Stars.propTypes = {
 		NUMBER_OF_STARS : PropTypes.number,
@@ -14,9 +16,11 @@ const Stars = () => {
 		createY         : PropTypes.number,
 		positionX       : PropTypes.number,
 		positionY       : PropTypes.number,
+		cloud           : PropTypes.oneOf( propsValues.cloud ).isRequired,
+		propsValues     : PropTypes.objectOf( PropTypes.arrayOf( PropTypes.string )),
 	};
 
-	const NUMBER_OF_STARS = 500;
+	let 	NUMBER_OF_STARS = 500;
 	const STAR            = [ '・', '∙', '・', '.', '✶', '✴︎', '∙', '・', '.', '・', '∙', '・', '.', '∙', '・' ];
 	const COLORS          = [ 'rgba(244, 236, 164, 0.7)', 'rgba(255, 255, 255, 0.9)', 'rgba(244, 164, 164, 0.9)', 'rgba(255, 255, 255, 0.9)', 'rgba(188, 234, 240, 0.9)', 'rgba(255, 255, 255, 0.9)' ];
 	const ANIMATIONS      = [ 'twinkle', 'twinkletwinkle', 'twinkle', 'twinkletwinkle', 'none', 'twinkle', 'twinkletwinkle', 'twinkle', 'twinkletwinkle' ];
@@ -28,6 +32,20 @@ const Stars = () => {
 	const STARS 		= [];
 	let 	positionX = 0;
 	let 	positionY = 0;
+
+	switch ( cloud ) {
+	default:
+	case 'noclouds':
+		NUMBER_OF_STARS = 500;
+		break;
+	case 'clouds':
+		NUMBER_OF_STARS = 100;
+		break;
+	case 'moreclouds':
+	case 'itrains':
+		NUMBER_OF_STARS = 0;
+		break;
+	}
 
 	const generateStarryNight = () => {
 
@@ -67,10 +85,9 @@ const Stars = () => {
 			verifyX();
 			verifyY();
 		}
-		console.log( STARS );
 	};
 
-	generateStarryNight();
+	setTimeout( generateStarryNight(), 6000 );
 
 	return (
 		<React.Fragment>

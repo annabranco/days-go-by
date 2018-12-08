@@ -403,8 +403,8 @@
 
 .night {
 	&.sky {
-		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(16, 36, 124, 0.3), rgba(14, 28, 90, 0.3));
-		background-color : rgb(1, 1, 1);
+		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.1), rgba(255, 187, 0, 0.1), rgba(255, 187, 0, 0.2), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(16, 36, 124, 0.3), rgba(14, 28, 90, 0.3));
+		background-color : black;
 		background-size  : 70%;
 
 		&.clouds {

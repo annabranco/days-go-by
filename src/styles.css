@@ -382,8 +382,8 @@ path {
     filter: saturate(70%) brightness(40%) contrast(150%); }
 
 .night.sky {
-  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(16, 36, 124, 0.3), rgba(14, 28, 90, 0.3));
-  background-color: #010101;
+  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.1), rgba(255, 187, 0, 0.1), rgba(255, 187, 0, 0.2), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(16, 36, 124, 0.3), rgba(14, 28, 90, 0.3));
+  background-color: black;
   background-size: 70%; }
   .night.sky.clouds {
     background-image: linear-gradient(to top, rgba(32, 26, 54, 0.85), #161616), url("./assets/images/stars.gif");
@@ -569,7 +569,7 @@ path {
   animation-iteration-count: infinite;
   opacity: 1;
   text-shadow: 0 0 10px white;
-  box-shadow: 0 0 20px 1px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.3);
   height: 2px;
   width: 2px;
   border-radius: 50%;
