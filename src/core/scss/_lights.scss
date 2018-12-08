@@ -72,7 +72,7 @@
 
 .morning {
 	&.sky {
-		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3));
+		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 166, 0, 0.4), rgba(255, 187, 0, 0.4), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3), rgba(30, 69, 247, 0.1));
 		background-color : rgb(35, 29, 63);
 
 		&.clouds {
@@ -172,7 +172,7 @@
 .day {
 	&.sky {
 		background-size  : 100%;
-		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3));
+		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3), rgba(30, 69, 247, 0.1));
 		background-color : rgb(36, 197, 237);
 
 		&.clouds {

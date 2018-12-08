@@ -197,7 +197,7 @@ path {
   opacity: 100%; }
 
 .morning.sky {
-  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3));
+  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 166, 0, 0.4), rgba(255, 187, 0, 0.4), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3), rgba(30, 69, 247, 0.1));
   background-color: #231d3f; }
   .morning.sky.clouds {
     background-image: linear-gradient(to top, #46506a, #212128); }
@@ -253,7 +253,7 @@ path {
 
 .day.sky {
   background-size: 100%;
-  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3));
+  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3), rgba(30, 69, 247, 0.1));
   background-color: #24c5ed; }
   .day.sky.clouds {
     background-image: linear-gradient(to top, #4f6dbd, #505b73); }
