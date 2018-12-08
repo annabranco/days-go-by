@@ -19,6 +19,18 @@ time, mark, audio, video {
   vertical-align: baseline;
   box-sizing: border-box; }
 
+.app {
+  background-size: 100%;
+  background-color: white; }
+  .app.morning {
+    background-color: white; }
+  .app.day {
+    background-color: #212B52; }
+  .app.afternoon {
+    background-color: #212B52; }
+  .app.night {
+    background-color: #212B52; }
+
 .version {
   font-family: sans-serif;
   z-index: 10;
@@ -47,8 +59,7 @@ body {
   align-items: center;
   padding-top: 30px;
   height: 100vh;
-  overflow: hidden;
-  transition: background-image 10s ease-in, background-color 10s ease-in; }
+  overflow: hidden; }
 
 .hills {
   z-index: 1;
@@ -135,8 +146,33 @@ path {
   stroke-width: 6;
   stroke: blue; }
 
+.neutral.sky, .morning.sky, .day.sky, .afternoon.sky, .night.sky {
+  transition: background-image 2s ease-in, background-color 8s ease-in; }
+
+.neutral.sun, .morning.sun, .day.sun, .afternoon.sun, .night.sun {
+  transition: 2s ease; }
+
+.neutral.hills, .morning.hills, .day.hills, .afternoon.hills, .night.hills {
+  transition: 2s ease; }
+
+.neutral.grass, .morning.grass, .day.grass, .afternoon.grass, .night.grass {
+  transition: 2s ease; }
+
+.neutral.flower, .morning.flower, .day.flower, .afternoon.flower, .night.flower {
+  transition: 2s ease; }
+
+.neutral.cloud, .morning.cloud, .day.cloud, .afternoon.cloud, .night.cloud {
+  transition: 2s ease; }
+
+.neutral.cloudsHigh, .morning.cloudsHigh, .day.cloudsHigh, .afternoon.cloudsHigh, .night.cloudsHigh {
+  transition: 2s ease; }
+
+.neutral.rainbow, .morning.rainbow, .day.rainbow, .afternoon.rainbow, .night.rainbow {
+  transition: 2s ease; }
+
 .neutral.sky {
-  background-image: linear-gradient(to top, #273c75, #353b48);
+  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.2), rgba(255, 187, 0, 0.2), rgba(2, 118, 175, 0.2), rgba(4, 35, 173, 0.2));
+  background-color: #5d9bbf;
   background-size: 60%; }
 
 .neutral.sun {
@@ -161,7 +197,8 @@ path {
   opacity: 100%; }
 
 .morning.sky {
-  background-image: linear-gradient(to top, #2e478b, #18182b); }
+  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3));
+  background-color: #231d3f; }
   .morning.sky.clouds {
     background-image: linear-gradient(to top, #46506a, #212128); }
   .morning.sky.moreclouds {
@@ -216,8 +253,8 @@ path {
 
 .day.sky {
   background-size: 100%;
-  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(0, 168, 255, 0.5));
-  background-color: white; }
+  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3));
+  background-color: #24c5ed; }
   .day.sky.clouds {
     background-image: linear-gradient(to top, #4f6dbd, #505b73); }
   .day.sky.moreclouds {
@@ -290,7 +327,8 @@ path {
     opacity: 0.2; }
 
 .afternoon.sky {
-  background-image: linear-gradient(to top, #2e478b, #18182b); }
+  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(16, 36, 124, 0.3), rgba(14, 28, 90, 0.3));
+  background-color: #180918; }
   .afternoon.sky.clouds {
     background-image: linear-gradient(to top, #46506a, #212128); }
   .afternoon.sky.moreclouds {
@@ -344,7 +382,8 @@ path {
     filter: saturate(70%) brightness(40%) contrast(150%); }
 
 .night.sky {
-  background-image: linear-gradient(to top, rgba(32, 26, 54, 0.6), rgba(12, 12, 14, 0.7)), url("./assets/images/stars.gif");
+  background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(16, 36, 124, 0.3), rgba(14, 28, 90, 0.3));
+  background-color: #010101;
   background-size: 70%; }
   .night.sky.clouds {
     background-image: linear-gradient(to top, rgba(32, 26, 54, 0.85), #161616), url("./assets/images/stars.gif");
@@ -521,3 +560,56 @@ path {
     /* transform: translate(0, -200px); */ }
   to {
     top: -200%; } }
+
+.star {
+  margin: 0;
+  position: absolute;
+  color: white;
+  font-size: 0.5rem;
+  animation-iteration-count: infinite;
+  opacity: 1;
+  text-shadow: 0 0 10px white;
+  box-shadow: 0 0 20px 1px rgba(255, 255, 255, 0.3);
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 0.5; }
+
+@keyframes twinkle {
+  0% {
+    opacity: 0; }
+  5% {
+    opacity: 0.4; }
+  30% {
+    opacity: 0.2; }
+  53% {
+    opacity: 0; }
+  60% {
+    opacity: 0.7; }
+  70% {
+    opacity: 0; } }
+
+@keyframes twinkletwinkle {
+  0% {
+    opacity: 0; }
+  5% {
+    opacity: 0.4; }
+  10% {
+    opacity: 0; }
+  30% {
+    opacity: 0.2; }
+  40% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  53% {
+    opacity: 0; }
+  56% {
+    opacity: 1; }
+  59% {
+    opacity: 0; }
+  60% {
+    opacity: 0.2; }
+  65% {
+    opacity: 0; } }

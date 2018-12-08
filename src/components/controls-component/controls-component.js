@@ -27,15 +27,18 @@ class Controls extends React.Component {
 	componentDidMount() {
 		const { light } = this.props;
 		this.setState({ light });
-		console.log( this.props );
 	}
 
 	componentDidChange() {
-		const { light } = this.state;
-		const sliderHandler = document.querySelector( '.sliderHandle' );
-
-		sliderHandler.classList.remove( 'neutral', 'morning', 'day', 'afternoon', 'night' );
-		sliderHandler.classList.add( light );
+		// const { light } = this.state;
+		// const sliderHandler = document.querySelector( '.sliderHandle' );
+		// const lights = [ 'morning', 'day', 'afternoon', 'night' ];
+		// sliderHandler.classList.add( light );
+		// const index = lights.indexOf( light );
+		// if ( index > -1 ) lights.splice( index, 1 );
+		// setTimeout(() => {
+		// 	for ( const _light of lights ) sliderHandler.classList.remove( _light );
+		// }, 5000 );
 
 		// switch ( light ) {
 		// default:
@@ -86,9 +89,9 @@ class Controls extends React.Component {
 					onAfterChange={ () => onChangeHoursSlider( currentHour )}
 				/>
 				<p className="teste-title">Light Controls</p>
-				<button className="teste-buttom" onClick={ () => onChangeLight( 'neutral' ) }>neutral</button>
+				<button className="teste-buttom" onClick={ () => onChangeLight( 'morning' ) }>morning</button>
 				<button className="teste-buttom" onClick={ () => onChangeLight( 'day' ) }>day</button>
-				<button className="teste-buttom" onClick={ () => onChangeLight( 'twilight' ) }>twilight</button>
+				<button className="teste-buttom" onClick={ () => onChangeLight( 'afternoon' ) }>afternoon</button>
 				<button className="teste-buttom" onClick={ () => onChangeLight( 'night' ) }>night</button>
 				<p className="teste-title">Cloud Controls</p>
 				<button className="teste-buttom" onClick={ () => onChangeClouds( 'noclouds' ) }>clearsky</button>

@@ -88,9 +88,7 @@ class App extends Component {
 		case 0:
 			this.setState({ light: 'night' });
 			break;
-
 		}
-
 	}
 
 	render() {
@@ -118,7 +116,7 @@ class App extends Component {
 		} = this;
 
 		return (
-			<div className="App">
+			<div className={`app ${ light }`}>
 				<Controls
 					onChangeLight = { onChangeLight }
 					onChangeClouds = { onChangeClouds }

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Stars from '../stars-component/star-component';
 import hills from '../../assets/images/hills.png';
 import grass from '../../assets/images/grass.png';
 
@@ -17,7 +18,8 @@ const Background = ({
 
 	return (
 		<div className="fixed-elements">
-			<div className={`sky ${ light } ${ cloud }`}></div>
+			<div className={ `sky ${ light } ${ cloud }` }></div>
+			{ light === 'night' && <Stars /> }
 			<img className={`hills ${ light } ${ cloud }`} src={ hills } alt="hills" />
 			<img className={`grass ${ light } ${ cloud }`} src={ grass } alt="grass" />
 		</div>

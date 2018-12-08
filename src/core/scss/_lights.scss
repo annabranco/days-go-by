@@ -1,7 +1,43 @@
+.neutral, .morning, .day, .afternoon, .night {
+
+	&.sky {
+		transition : background-image 2s ease-in, background-color 8s ease-in;
+	}
+
+	&.sun {
+		transition : 2s ease;
+	}
+
+	&.hills {
+		transition : 2s ease;
+	}
+
+	&.grass {
+		transition : 2s ease;
+	}
+
+	&.flower {
+		transition : 2s ease;
+	}
+
+	&.cloud {
+		transition : 2s ease;
+	}
+
+	&.cloudsHigh {
+		transition : 2s ease;
+	}
+
+	&.rainbow {
+		transition : 2s ease;
+	}
+}
+
 .neutral {
 
 	&.sky {
-		background-image : linear-gradient(to top, rgba(39, 60, 117, 1), rgba(53, 59, 72,1));
+		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.2), rgba(255, 187, 0, 0.2), rgba(2, 118, 175, 0.2), rgba(4, 35, 173, 0.2));
+		background-color : rgb(93, 155, 191);
 		background-size  : 60%;
 	}
 
@@ -36,7 +72,8 @@
 
 .morning {
 	&.sky {
-		background-image : linear-gradient(to top, rgba(46, 71, 139, 1), rgba(24, 24, 43, 1));
+		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3));
+		background-color : rgb(35, 29, 63);
 
 		&.clouds {
 			background-image : linear-gradient(to top, rgba(70, 80, 106, 1), rgba(33, 33, 40, 1));
@@ -135,8 +172,8 @@
 .day {
 	&.sky {
 		background-size  : 100%;
-		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(0, 168, 255, 0.5));
-		background-color : white;
+		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3));
+		background-color : rgb(36, 197, 237);
 
 		&.clouds {
 			background-image : linear-gradient(to top, rgba(79, 109, 189, 1), rgba(80, 91, 115, 1));
@@ -267,7 +304,8 @@
 
 .afternoon {
 	&.sky {
-		background-image : linear-gradient(to top, rgba(46, 71, 139, 1), rgba(24, 24, 43, 1));
+		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(16, 36, 124, 0.3), rgba(14, 28, 90, 0.3));
+		background-color : rgb(24, 9, 24);
 
 		&.clouds {
 			background-image : linear-gradient(to top, rgba(70, 80, 106, 1), rgba(33, 33, 40, 1));
@@ -365,7 +403,8 @@
 
 .night {
 	&.sky {
-		background-image : linear-gradient(to top, rgba(32, 26, 54, 0.6), rgba(12, 12, 14, 0.7)), url('./assets/images/stars.gif');
+		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(16, 36, 124, 0.3), rgba(14, 28, 90, 0.3));
+		background-color : rgb(1, 1, 1);
 		background-size  : 70%;
 
 		&.clouds {
