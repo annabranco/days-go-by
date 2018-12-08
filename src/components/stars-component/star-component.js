@@ -10,6 +10,7 @@ class Stars extends React.Component {
 			light           : '',
 			NUMBER_OF_STARS : 500,
 			STARS_OBJ       : [],
+			fadeInOrOut     : 'fadeIn',
 		};
 	}
 
@@ -34,7 +35,6 @@ class Stars extends React.Component {
 	ANIMATIONS = [ 'twinkle', 'twinkletwinkle', 'twinkle', 'twinkletwinkle', 'none', 'twinkle', 'twinkletwinkle', 'twinkle', 'twinkletwinkle' ];
 	LIMIT_BOTTOM = window.innerHeight;
 	LIMIT_RIGHT = window.innerWidth;
-
 	STARS_OBJ = [];
 
 	componentDidMount() {
@@ -61,7 +61,14 @@ class Stars extends React.Component {
 
 		if ( prevProps.light !== light ) this.setState({ light });
 
-		if ( prevProps.light !== 'night' && light === 'night' ) this.generateStarryNight();
+		if ( prevProps.light !== 'night' && light === 'night' ) {
+			this.setState({ fadeInOrOut: 'fadeIn' });
+			this.generateStarryNight();
+		}
+		if ( prevProps.light === 'night' && light !== 'night' ) {
+			this.setState({ fadeInOrOut: 'fadeOut' });
+			setTimeout(() => this.setState({ STARS_OBJ: [] }), 25000 );
+		}
 	}
 
 	generateCoordX = () => {
@@ -115,10 +122,13 @@ class Stars extends React.Component {
 	}
 
 	render() {
-		const { STARS_OBJ } = this.state;
+		const {
+			STARS_OBJ,
+			fadeInOrOut,
+		} = this.state;
 
 		return (
-			<div className="starryStarryNight">
+			<div className={`starryStarryNight ${ fadeInOrOut }`}>
 				<div className="stars__wrapper">
 					{ STARS_OBJ &&
 							STARS_OBJ.map(( star, index ) => <p

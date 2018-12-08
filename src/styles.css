@@ -563,14 +563,18 @@ path {
 
 .starryStarryNight {
   animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-name: fadeIn;
-  animation-duration: 8s;
+  animation-duration: 20s;
   animation-delay: 4s;
-  opacity: 0;
+  animation-fill-mode: forwards;
   position: absolute;
   top: 0;
   left: 0; }
+  .starryStarryNight.fadeIn {
+    animation-name: fadeIn;
+    opacity: 0; }
+  .starryStarryNight.fadeOut {
+    animation-name: fadeOut;
+    opacity: 1; }
 
 .stars__wrapper {
   position: relative; }
