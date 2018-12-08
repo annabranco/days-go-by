@@ -34,3 +34,44 @@
 	font-weight : 700;
 	font-family : sans-serif;
 }
+
+.sliderHandle {
+	width  : 100% !important;
+	left   : 97% !important;
+	cursor : pointer;
+
+	&::after {
+		background : yellow !important;
+		border     : 1px solid black !important;
+		transition : all 1s ease;
+	}
+
+	&.morning {
+		transform : rotate(0deg);
+	}
+
+	&.day {
+		transform : rotate(90deg);
+	}
+
+	&.afternoon {
+		transform : rotate(180deg);
+	}
+
+	&.night {
+		transform : rotate(270deg);
+	}
+}
+
+circle {
+	r                 : 59;
+	stroke-dashoffset : 10;
+	stroke-width      : 25;
+}
+
+path {
+	opacity      : 0.3;
+	stroke-width : 6;
+	stroke       : blue;
+
+}
