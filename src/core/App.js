@@ -131,6 +131,7 @@ class App extends Component {
 					onTriggerSun={ onTriggerSun }
 					onChangeHoursSlider={ onChangeHoursSlider }
 					light={ light }
+					cloud={ cloud }
 					propsValues = { propsValues }
 				/>
 				<Background

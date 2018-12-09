@@ -70,6 +70,7 @@ class Controls extends React.Component {
 			onTriggerClouds,
 			onTriggerSun,
 			onChangeHoursSlider,
+			cloud,
 		} = this.props;
 
 		const { currentHour } = this.state;
@@ -89,7 +90,6 @@ class Controls extends React.Component {
 						<i className="controls__icon sun--icon-down-arrow">︎⬇︎</i>
 						<i className="controls__icon sun--icon-up-arrow">⬆︎</i>
 						<i className="controls__icon--open">►</i>
-
 						<Roundy
 							value={ currentHour }
 							min={ 0 }
@@ -101,6 +101,16 @@ class Controls extends React.Component {
 							onChange={ value => this.setState({ currentHour: value }) }
 							onAfterChange={ () => onChangeHoursSlider( currentHour )}
 						/>
+						{ cloud !== 'clouds' &&
+							<button className="control-buttom controls__cloud" onClick={ () => onChangeClouds( 'clouds' ) }>🌤</button>
+						}
+						{ cloud === 'clouds' &&
+							<React.Fragment>
+								<button className="control-buttom controls__morecloud" onClick={ () => onChangeClouds( 'clouds' ) }>☁️</button>
+								<button className="control-buttom controls__cloud control__erase-buttom" onClick={ () => onChangeClouds( 'noclouds' ) }>🌤</button>
+								<button className="control-buttom controls__highcloud" onClick={ () => onChangeClouds( 'clouds' ) }>⛅️</button>
+							</React.Fragment>
+						}
 					</div>
 				</div>
 				<div className="teste-console">

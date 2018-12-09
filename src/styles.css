@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -112,7 +113,7 @@ body {
   bottom: 5%;
   left: 0;
   height: 240px;
-  width: 20px;
+  width: 300px;
   border-radius: 0 50px 50px 0;
   background-image: linear-gradient(to right, rgba(211, 211, 211, 0.85), rgba(216, 216, 216, 0.8), rgba(237, 237, 237, 0.8));
   display: flex;
@@ -157,7 +158,8 @@ body {
   transform: translate(-50%, 0);
   color: white;
   text-shadow: 0 0 1px black;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  cursor: default; }
 
 .sun--icon {
   position: absolute;
@@ -166,33 +168,40 @@ body {
   transform: translate(-50%, 0);
   color: #d39a1d;
   text-shadow: 0 0 1px black;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  cursor: default; }
 
 .sun--icon-down {
   position: absolute;
   left: -10px;
   top: 50%;
-  transform: translate(0, -50%); }
+  transform: translate(0, -50%);
+  text-shadow: 0 0 1px black;
+  cursor: default; }
 
 .sun--icon-up {
   position: absolute;
   right: -15px;
   top: 50%;
-  transform: translate(0, -50%); }
+  transform: translate(0, -50%);
+  text-shadow: 0 0 1px black;
+  cursor: default; }
 
 .sun--icon-down-arrow {
   position: absolute;
   left: -8px;
   top: 42%;
   transform: translate(0, -50%);
-  font-size: 0.7rem; }
+  font-size: 0.7rem;
+  cursor: default; }
 
 .sun--icon-up-arrow {
   position: absolute;
   right: -8px;
   top: 42%;
   transform: translate(0, -50%);
-  font-size: 0.7rem; }
+  font-size: 0.7rem;
+  cursor: default; }
 
 .teste-buttom {
   background-image: linear-gradient(to bottom, #ced2d6, #caecf1);
@@ -236,6 +245,35 @@ path {
   opacity: 0.3;
   stroke-width: 6;
   stroke: blue; }
+
+.control-buttom {
+  position: absolute;
+  right: -90px;
+  font-size: 2rem;
+  transform: translate(0, -50%);
+  background: none;
+  border: none;
+  text-shadow: 0 0 2px black;
+  cursor: pointer;
+  outline: none; }
+  .control-buttom:hover {
+    text-shadow: 0 0 10px black; }
+
+.control__erase-buttom::before {
+  position: absolute;
+  content: '❌';
+  right: 10px;
+  font-size: 1.2rem;
+  line-height: 2.3; }
+
+.controls__cloud {
+  top: 50%; }
+
+.controls__morecloud {
+  top: 10%; }
+
+.controls__highcloud {
+  top: 90%; }
 
 .neutral.sky, .morning.sky, .day.sky, .afternoon.sky, .night.sky {
   transition: background-image 2s ease-in, background-color 8s ease-in; }

@@ -26,8 +26,8 @@
 	bottom   : 5%;
 	left     : 0;
 	height   : 240px;
-	width    : 20px;
-	// width            : 300px;
+	// width    : 20px;
+	width            : 300px;
 	border-radius    : 0 50px 50px 0;
 	background-image : linear-gradient(to right, rgba(lightgray, 0.85), rgba(216, 216, 216, 0.8), rgba(rgb(237, 237, 237), 0.8));
 	display          : flex;
@@ -82,6 +82,7 @@
 	color       : white;
 	text-shadow : 0 0 1px black;
 	font-size   : 1.5rem;
+	cursor      : default;
 }
 
 .sun--icon {
@@ -92,20 +93,25 @@
 	color       : rgb(211, 154, 29);
 	text-shadow : 0 0 1px black;
 	font-size   : 1.5rem;
+	cursor      : default;
 }
 
 .sun--icon-down {
-	position  : absolute;
-	left      : -10px;
-	top       : 50%;
-	transform : translate(0, -50%);
+	position    : absolute;
+	left        : -10px;
+	top         : 50%;
+	transform   : translate(0, -50%);
+	text-shadow : 0 0 1px black;
+	cursor      : default;
 }
 
 .sun--icon-up {
-	position  : absolute;
-	right     : -15px;
-	top       : 50%;
-	transform : translate(0, -50%);
+	position    : absolute;
+	right       : -15px;
+	top         : 50%;
+	transform   : translate(0, -50%);
+	text-shadow : 0 0 1px black;
+	cursor      : default;
 }
 
 .sun--icon-down-arrow {
@@ -114,6 +120,7 @@
 	top       : 42%;
 	transform : translate(0, -50%);
 	font-size : 0.7rem;
+	cursor    : default;
 }
 
 .sun--icon-up-arrow {
@@ -122,6 +129,7 @@
 	top       : 42%;
 	transform : translate(0, -50%);
 	font-size : 0.7rem;
+	cursor    : default;
 }
 
 .teste-buttom {
@@ -181,4 +189,43 @@ path {
 	opacity      : 0.3;
 	stroke-width : 6;
 	stroke       : blue;
+}
+
+.control-buttom {
+	position    : absolute;
+	right       : -90px;
+	font-size   : 2rem;
+	transform   : translate(0, -50%);
+	background  : none;
+	border      : none;
+	text-shadow : 0 0 2px black;
+	cursor      : pointer;
+	outline     : none;
+
+	&:hover {
+		text-shadow : 0 0 10px black;
+	}
+}
+
+.control__erase-buttom {
+
+	&::before {
+		position    : absolute;
+		content     : '❌';
+		right       : 10px;
+		font-size   : 1.2rem;
+		line-height : 2.3;
+	}
+}
+
+.controls__cloud {
+	top : 50%;
+}
+
+.controls__morecloud {
+	top : 10%;
+}
+
+.controls__highcloud {
+	top : 90%;
 }
