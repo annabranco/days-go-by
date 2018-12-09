@@ -151,7 +151,8 @@
 	width : 49%;
 	top   : 49%;
 	// left   : 50% !important;
-	cursor : pointer;
+	cursor    : pointer;
+	transform : rotate(0deg);
 
 	&::after {
 		border     : 2px solid black !important;

@@ -13,7 +13,7 @@ class App extends Component {
 		super( props );
 
 		this.state = {
-			light      : 'neutral',
+			light      : 'morning',
 			cloud      : 'noclouds',
 			rain       : 'norain',
 			flower     : false,

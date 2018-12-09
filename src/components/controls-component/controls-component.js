@@ -7,8 +7,8 @@ class Controls extends React.Component {
 	constructor( props ) {
 		super( props );
 		this.state = {
-			currentHour : 0,
-			light       : '',
+			currentHour : 6,
+			light       : 'morning',
 		};
 	}
 
@@ -21,6 +21,7 @@ class Controls extends React.Component {
 		onTriggerClouds     : PropTypes.func.isRequired,
 		onTriggerSun        :	PropTypes.func.isRequired,
 		onChangeHoursSlider : PropTypes.func.isRequired,
+		cloud               : PropTypes.oneOf([ 'noclouds', 'clouds', 'moreclouds', 'itrains' ]),
 		light               : PropTypes.oneOf([ 'neutral', 'morning', 'day', 'afternoon', 'night' ]),
 	};
 

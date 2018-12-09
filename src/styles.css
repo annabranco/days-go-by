@@ -219,7 +219,8 @@ body {
 .sliderHandle {
   width: 49%;
   top: 49%;
-  cursor: pointer; }
+  cursor: pointer;
+  transform: rotate(0deg); }
   .sliderHandle::after {
     border: 2px solid black !important;
     transition: all 1s ease;
