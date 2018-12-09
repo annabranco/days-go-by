@@ -20,6 +20,68 @@
 	}
 }
 
+.controls__console-wrapper {
+	z-index  : 5;
+	position : absolute;
+	top      : 50%;
+	left     : 20px;
+}
+
+.controls__console-inner {
+	position : relative;
+}
+
+
+.moon--icon {
+	position    : absolute;
+	top         : -20px;
+	left        : 50%;
+	transform   : translate(-50%, 0);
+	color       : white;
+	text-shadow : 0 0 1px black;
+	font-size   : 1.5rem;
+}
+
+.sun--icon {
+	position    : absolute;
+	bottom      : -20px;
+	left        : 50%;
+	transform   : translate(-50%, 0);
+	color       : rgb(211, 154, 29);
+	text-shadow : 0 0 1px black;
+	font-size   : 1.5rem;
+}
+
+.sun--icon-down {
+	position  : absolute;
+	left      : -10px;
+	top       : 50%;
+	transform : translate(0, -50%);
+}
+
+.sun--icon-up {
+	position  : absolute;
+	right     : -15px;
+	top       : 50%;
+	transform : translate(0, -50%);
+}
+
+.sun--icon-down-arrow {
+	position  : absolute;
+	left      : -8px;
+	top       : 42%;
+	transform : translate(0, -50%);
+	font-size : 0.7rem;
+}
+
+.sun--icon-up-arrow {
+	position  : absolute;
+	right     : -8px;
+	top       : 42%;
+	transform : translate(0, -50%);
+	font-size : 0.7rem;
+}
+
 .teste-buttom {
 	background-image : linear-gradient(to bottom, #ced2d6, #caecf1);
 	cursor           : pointer;
@@ -36,14 +98,17 @@
 }
 
 .sliderHandle {
-	width  : 100% !important;
-	left   : 97% !important;
+	width : 49%;
+	top   : 49%;
+	// left   : 50% !important;
 	cursor : pointer;
 
 	&::after {
-		background : yellow !important;
-		border     : 1px solid black !important;
+		border     : 2px solid black !important;
 		transition : all 1s ease;
+		width      : 50%;
+		height     : 3px;
+		box-sizing : border-box;
 	}
 
 	&.morning {

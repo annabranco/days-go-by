@@ -76,41 +76,59 @@ class Controls extends React.Component {
 
 		return (
 
-			<div className="teste-console">
-				<Roundy
-					value={ currentHour }
-					min={ 0 }
-					max={ 24 }
-					step={ 6 }
-					radius={ 80 }
-					sliced
-					color="pink"
-					onChange={ value => this.setState({ currentHour: value }) }
-					onAfterChange={ () => onChangeHoursSlider( currentHour )}
-				/>
-				<p className="teste-title">Light Controls</p>
-				<button className="teste-buttom" onClick={ () => onChangeLight( 'morning' ) }>morning</button>
-				<button className="teste-buttom" onClick={ () => onChangeLight( 'day' ) }>day</button>
-				<button className="teste-buttom" onClick={ () => onChangeLight( 'afternoon' ) }>afternoon</button>
-				<button className="teste-buttom" onClick={ () => onChangeLight( 'night' ) }>night</button>
-				<p className="teste-title">Cloud Controls</p>
-				<button className="teste-buttom" onClick={ () => onChangeClouds( 'noclouds' ) }>clearsky</button>
-				<button className="teste-buttom" onClick={ () => onChangeClouds( 'clouds' ) }>clouds</button>
-				<button className="teste-buttom" onClick={ () => onChangeClouds( 'moreclouds' ) }>moreclouds</button>
-				<button className="teste-buttom" onClick={ () => onChangeClouds( 'itrains' ) }>itrains</button>
-				<p className="teste-title">Rain Controls</p>
-				<button className="teste-buttom" onClick={ () => onChangeRain( 'norain' ) }>norain</button>
-				<button className="teste-buttom" onClick={ () => onChangeRain( 'rain' ) }>rain</button>
-				<button className="teste-buttom" onClick={ () => onChangeRain( 'heavyrain' ) }>heavyrain</button>
-				<p className="teste-title">Atmosphere Controls</p>
-				<button className="teste-buttom" onClick={ () => onTriggerClouds( 'noclouds' ) }>noclouds</button>
-				<button className="teste-buttom" onClick={ () => onTriggerClouds( 'highclouds' ) }>highclouds</button>
-				<button className="teste-buttom" onClick={ () => onTriggerClouds( 'lowcloud' ) }>lowcloud</button>
-				<p className="teste-title">Events Controls</p>
-				<button className="teste-buttom" onClick={ () => onTriggerSun() }>sun</button>
-				<button className="teste-buttom" onClick={ () => onTriggerFlower() }>flower</button>
-				<button className="teste-buttom" onClick={ () => onTriggerRainbow() }>rainbow</button>
-			</div>
+			<React.Fragment>
+
+				<div className="controls__console-wrapper">
+					<div className="controls__console-inner">
+						{/* <i className="fas fa-sun sun--icon"></i>
+						<i className="fas fa-moon moon--icon"></i> */}
+						<i className="moon--icon">🌜</i>
+						<i className="sun--icon">☀️</i>
+						<i className="sun--icon-down">☀️</i>
+						<i className="sun--icon-up">☀️</i>
+						<i className="sun--icon-down-arrow">︎⬇︎</i>
+						<i className="sun--icon-up-arrow">⬆︎</i>
+
+						<Roundy
+							value={ currentHour }
+							min={ 0 }
+							max={ 24 }
+							step={ 6 }
+							radius={ 80 }
+							sliced
+							color="pink"
+							onChange={ value => this.setState({ currentHour: value }) }
+							onAfterChange={ () => onChangeHoursSlider( currentHour )}
+						/>
+					</div>
+				</div>
+				<div className="teste-console">
+
+					<p className="teste-title">Light Controls</p>
+					<button className="teste-buttom" onClick={ () => onChangeLight( 'morning' ) }>morning</button>
+					<button className="teste-buttom" onClick={ () => onChangeLight( 'day' ) }>day</button>
+					<button className="teste-buttom" onClick={ () => onChangeLight( 'afternoon' ) }>afternoon</button>
+					<button className="teste-buttom" onClick={ () => onChangeLight( 'night' ) }>night</button>
+					<p className="teste-title">Cloud Controls</p>
+					<button className="teste-buttom" onClick={ () => onChangeClouds( 'noclouds' ) }>clearsky</button>
+					<button className="teste-buttom" onClick={ () => onChangeClouds( 'clouds' ) }>clouds</button>
+					<button className="teste-buttom" onClick={ () => onChangeClouds( 'moreclouds' ) }>moreclouds</button>
+					<button className="teste-buttom" onClick={ () => onChangeClouds( 'itrains' ) }>itrains</button>
+					<p className="teste-title">Rain Controls</p>
+					<button className="teste-buttom" onClick={ () => onChangeRain( 'norain' ) }>norain</button>
+					<button className="teste-buttom" onClick={ () => onChangeRain( 'rain' ) }>rain</button>
+					<button className="teste-buttom" onClick={ () => onChangeRain( 'heavyrain' ) }>heavyrain</button>
+					<p className="teste-title">Atmosphere Controls</p>
+					<button className="teste-buttom" onClick={ () => onTriggerClouds( 'noclouds' ) }>noclouds</button>
+					<button className="teste-buttom" onClick={ () => onTriggerClouds( 'highclouds' ) }>highclouds</button>
+					<button className="teste-buttom" onClick={ () => onTriggerClouds( 'lowcloud' ) }>lowcloud</button>
+					<p className="teste-title">Events Controls</p>
+					<button className="teste-buttom" onClick={ () => onTriggerSun() }>sun</button>
+					<button className="teste-buttom" onClick={ () => onTriggerFlower() }>flower</button>
+					<button className="teste-buttom" onClick={ () => onTriggerRainbow() }>rainbow</button>
+				</div>
+			</React.Fragment>
+
 		);
 	}
 }
