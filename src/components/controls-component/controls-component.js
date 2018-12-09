@@ -82,12 +82,13 @@ class Controls extends React.Component {
 					<div className="controls__console-inner">
 						{/* <i className="fas fa-sun sun--icon"></i>
 						<i className="fas fa-moon moon--icon"></i> */}
-						<i className="moon--icon">🌜</i>
-						<i className="sun--icon">☀️</i>
-						<i className="sun--icon-down">☀️</i>
-						<i className="sun--icon-up">☀️</i>
-						<i className="sun--icon-down-arrow">︎⬇︎</i>
-						<i className="sun--icon-up-arrow">⬆︎</i>
+						<i className="controls__icon moon--icon">🌜</i>
+						<i className="controls__icon sun--icon">☀️</i>
+						<i className="controls__icon sun--icon-down">☀️</i>
+						<i className="controls__icon sun--icon-up">☀️</i>
+						<i className="controls__icon sun--icon-down-arrow">︎⬇︎</i>
+						<i className="controls__icon sun--icon-up-arrow">⬆︎</i>
+						<i className="controls__icon--open">►</i>
 
 						<Roundy
 							value={ currentHour }

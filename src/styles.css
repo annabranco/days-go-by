@@ -109,11 +109,46 @@ body {
 .controls__console-wrapper {
   z-index: 5;
   position: absolute;
-  top: 50%;
-  left: 20px; }
+  bottom: 5%;
+  left: 0;
+  height: 240px;
+  width: 20px;
+  border-radius: 0 50px 50px 0;
+  background-image: linear-gradient(to right, rgba(211, 211, 211, 0.85), rgba(216, 216, 216, 0.8), rgba(237, 237, 237, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 0;
+  border-right: 0;
+  box-shadow: 5px 10px 20px 0 rgba(255, 255, 255, 0.2), inset -5px -5px 20px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: width 0.4s ease-in-out; }
+  .controls__console-wrapper > div > .controls__icon--open {
+    color: rgba(0, 0, 255, 0.7);
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 1.3rem;
+    line-height: 2;
+    text-shadow: 0 0 3px white;
+    cursor: pointer;
+    transition: all ease 2s;
+    opacity: 1; }
+  .controls__console-wrapper:hover {
+    width: 300px;
+    transition: width 0.6s ease-in-out; }
+    .controls__console-wrapper:hover > div > .controls__icon--open {
+      opacity: 0;
+      transition: all ease 0.2s; }
 
 .controls__console-inner {
-  position: relative; }
+  position: relative;
+  height: 165px;
+  width: 160px;
+  left: 40px; }
 
 .moon--icon {
   position: absolute;
@@ -194,7 +229,8 @@ body {
 circle {
   r: 59;
   stroke-dashoffset: 10;
-  stroke-width: 25; }
+  stroke-width: 25;
+  stroke: rgba(0, 0, 0, 0.6); }
 
 path {
   opacity: 0.3;
