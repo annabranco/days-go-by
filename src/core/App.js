@@ -76,17 +76,21 @@ class App extends Component {
 			this.setState({ light: 'neutral' });
 			break;
 		case 6:
-			this.setState({ light: 'morning' });
+			this.setState( { light: 'morning' } );
 			break;
 		case 12:
-			this.setState({ light: 'day' });
+			this.setState( { light: 'day' } );
+			this.setState( { sun: 'sunrise' } );
 			break;
 		case 18:
-			this.setState({ light: 'afternoon' });
+			this.setState( { light: 'afternoon' } );
+			this.setState( { sun: 'sunset' } );
 			break;
 		case 24:
 		case 0:
-			this.setState({ light: 'night' });
+			this.setState( { light: 'night' } );
+			this.setState( { sun: '' } );
+
 			break;
 		}
 	}
