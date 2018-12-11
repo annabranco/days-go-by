@@ -13,7 +13,7 @@ class App extends Component {
 		super( props );
 
 		this.state = {
-			light      : 'neutral',
+			light      : 'morning',
 			cloud      : 'noclouds',
 			rain       : 'norain',
 			flower     : false,
@@ -25,7 +25,7 @@ class App extends Component {
 	}
 
 	propsValues = {
-		light : [ 'neutral', 'day', 'twilight', 'night' ],
+		light : [ 'neutral', 'morning', 'day', 'afternoon', 'night' ],
 		cloud : [ 'noclouds', 'clouds', 'moreclouds', 'itrains' ],
 		rain  : [ 'norain', 'rain', 'heavyrain' ],
 		sun   : [ '', 'sunrise', 'sunset' ],
@@ -69,6 +69,32 @@ class App extends Component {
 		}
 	}
 
+	onChangeHoursSlider = currentHour => {
+		console.log( 'hour', currentHour );
+		switch ( currentHour ) {
+		default:
+			this.setState({ light: 'neutral' });
+			break;
+		case 6:
+			this.setState( { light: 'morning' } );
+			break;
+		case 12:
+			this.setState( { light: 'day' } );
+			this.setState( { sun: 'sunrise' } );
+			break;
+		case 18:
+			this.setState( { light: 'afternoon' } );
+			this.setState( { sun: 'sunset' } );
+			break;
+		case 24:
+		case 0:
+			this.setState( { light: 'night' } );
+			this.setState( { sun: '' } );
+
+			break;
+		}
+	}
+
 	render() {
 		const {
 			light,
@@ -90,10 +116,11 @@ class App extends Component {
 			onTriggerRainbow,
 			onTriggerClouds,
 			onTriggerSun,
+			onChangeHoursSlider,
 		} = this;
 
 		return (
-			<div className="App">
+			<div className={`app ${ light }`}>
 				<Controls
 					onChangeLight = { onChangeLight }
 					onChangeClouds = { onChangeClouds }
@@ -101,7 +128,11 @@ class App extends Component {
 					onTriggerFlower = { onTriggerFlower }
 					onTriggerRainbow = { onTriggerRainbow }
 					onTriggerClouds = { onTriggerClouds }
-					onTriggerSun = { onTriggerSun }
+					onTriggerSun={ onTriggerSun }
+					onChangeHoursSlider={ onChangeHoursSlider }
+					light={ light }
+					cloud={ cloud }
+					propsValues = { propsValues }
 				/>
 				<Background
 					light = { light }

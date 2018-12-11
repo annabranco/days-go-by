@@ -20,6 +20,118 @@
 	}
 }
 
+.controls__console-wrapper {
+	z-index  : 5;
+	position : absolute;
+	bottom   : 5%;
+	left     : 0;
+	height   : 240px;
+	// width    : 20px;
+	width            : 300px;
+	border-radius    : 0 50px 50px 0;
+	background-image : linear-gradient(to right, rgba(lightgray, 0.85), rgba(216, 216, 216, 0.8), rgba(rgb(237, 237, 237), 0.8));
+	display          : flex;
+	align-items      : center;
+	justify-content  : flex-start;
+	border           : 1px solid rgba(white, 0.3);
+	border-left      : 0;
+	border-right     : 0;
+	box-shadow       : 5px 10px 20px 0 rgba(white, 0.2), inset -5px -5px 20px rgba(black, 0.3);
+	box-sizing       : border-box;
+	overflow         : hidden;
+	transition       : width 0.4s ease-in-out;
+
+	& > div > .controls__icon--open {
+		color       : rgba(blue, 0.7);
+		position    : absolute;
+		left        : -40px;
+		top         : 50%;
+		transform   : translate(0, -50%);
+		font-size   : 1.3rem;
+		line-height : 2;
+		text-shadow : 0 0 3px white;
+		cursor      : pointer;
+		transition  : all ease 2s;
+		opacity     : 1;
+	}
+
+	&:hover {
+		width      : 300px;
+		transition : width 0.6s ease-in-out;
+
+		& > div > .controls__icon--open {
+			opacity    : 0;
+			transition : all ease 0.2s;
+		}
+	}
+}
+
+.controls__console-inner {
+	position : relative;
+	height   : 165px;
+	width    : 160px;
+	left     : 40px;
+}
+
+
+.moon--icon {
+	position    : absolute;
+	top         : -20px;
+	left        : 50%;
+	transform   : translate(-50%, 0);
+	color       : white;
+	text-shadow : 0 0 1px black;
+	font-size   : 1.5rem;
+	cursor      : default;
+}
+
+.sun--icon {
+	position    : absolute;
+	bottom      : -20px;
+	left        : 50%;
+	transform   : translate(-50%, 0);
+	color       : rgb(211, 154, 29);
+	text-shadow : 0 0 1px black;
+	font-size   : 1.5rem;
+	cursor      : default;
+}
+
+.sun--icon-down {
+	position    : absolute;
+	left        : -10px;
+	top         : 50%;
+	transform   : translate(0, -50%);
+	text-shadow : 0 0 1px black;
+	cursor      : default;
+}
+
+.sun--icon-up {
+	position    : absolute;
+	right       : -15px;
+	top         : 50%;
+	transform   : translate(0, -50%);
+	text-shadow : 0 0 1px black;
+	cursor      : default;
+}
+
+.sun--icon-down-arrow {
+	position  : absolute;
+	left      : -8px;
+	top       : 42%;
+	transform : translate(0, -50%);
+	font-size : 0.7rem;
+	cursor    : default;
+}
+
+.sun--icon-up-arrow {
+	position  : absolute;
+	right     : -8px;
+	top       : 42%;
+	transform : translate(0, -50%);
+	font-size : 0.7rem;
+	cursor    : default;
+}
+
 .teste-buttom {
 	background-image : linear-gradient(to bottom, #ced2d6, #caecf1);
 	cursor           : pointer;
@@ -33,4 +145,88 @@
 	font-size   : 0.8rem;
 	font-weight : 700;
 	font-family : sans-serif;
+}
+
+.sliderHandle {
+	width : 49%;
+	top   : 49%;
+	// left   : 50% !important;
+	cursor    : pointer;
+	transform : rotate(0deg);
+
+	&::after {
+		border     : 2px solid black !important;
+		transition : all 1s ease;
+		width      : 50%;
+		height     : 3px;
+		box-sizing : border-box;
+	}
+
+	&.morning {
+		transform : rotate(0deg);
+	}
+
+	&.day {
+		transform : rotate(90deg);
+	}
+
+	&.afternoon {
+		transform : rotate(180deg);
+	}
+
+	&.night {
+		transform : rotate(270deg);
+	}
+}
+
+circle {
+	r                 : 59;
+	stroke-dashoffset : 10;
+	stroke-width      : 25;
+	stroke            : rgba(black, 0.6);
+}
+
+path {
+	opacity      : 0.3;
+	stroke-width : 6;
+	stroke       : blue;
+}
+
+.control-buttom {
+	position    : absolute;
+	right       : -90px;
+	font-size   : 2rem;
+	transform   : translate(0, -50%);
+	background  : none;
+	border      : none;
+	text-shadow : 0 0 2px black;
+	cursor      : pointer;
+	outline     : none;
+
+	&:hover {
+		text-shadow : 0 0 10px black;
+	}
+}
+
+.control__erase-buttom {
+
+	&::before {
+		position    : absolute;
+		content     : '❌';
+		right       : 10px;
+		font-size   : 1.2rem;
+		line-height : 2.3;
+	}
+}
+
+.controls__cloud {
+	top : 50%;
+}
+
+.controls__morecloud {
+	top : 10%;
+}
+
+.controls__highcloud {
+	top : 90%;
 }
