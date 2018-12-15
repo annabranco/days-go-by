@@ -208,7 +208,7 @@ class App extends Component {
 				<TheSun thesun={ sun }/>
 				}
 				<p className="author">Anna Branco</p>
-      	<p className="version">v0.7</p>
+      	<p className="version">v0.8</p>
 			</div>
 		);
 	}
