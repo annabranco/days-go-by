@@ -7,7 +7,7 @@ const Rain = ({
 }) => {
 
 	Rain.propTypes = {
-		rain        : PropTypes.oneOf( propsValues.cloud ).isRequired,
+		rain        : PropTypes.oneOf( propsValues.rain ).isRequired,
 		propsValues : PropTypes.objectOf( PropTypes.arrayOf( PropTypes.string )),
 	};
 

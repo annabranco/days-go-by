@@ -26,6 +26,7 @@ class Controls extends React.Component {
 		moreclouds          : PropTypes.bool.isRequired,
 		cloud               : PropTypes.oneOf([ 'noclouds', 'fewclouds', 'clouds', 'moreclouds', 'itrains' ]),
 		light               : PropTypes.oneOf([ 'neutral', 'morning', 'day', 'afternoon', 'night' ]),
+		rain                : PropTypes.oneOf([ 'norain', 'rain', 'heavyrain' ]),
 	};
 
 	componentDidMount() {
@@ -87,6 +88,7 @@ class Controls extends React.Component {
 			cloud,
 			clouds,
 			moreclouds,
+			rain,
 		} = this.props;
 
 		const { currentHour } = this.state;
@@ -121,12 +123,18 @@ class Controls extends React.Component {
 						{ cloud === 'noclouds' &&
 							<button className="control-buttom controls__cloud" onClick={ () => onChangeClouds( 'fewclouds' ) }>🌤</button>
 						}
-						{ ( cloud === 'fewclouds' || cloud === 'clouds' || cloud === 'moreclouds' ) &&
+						{ ( cloud === 'fewclouds' || cloud === 'clouds' || cloud === 'moreclouds' || cloud === 'itrains' ) &&
 							<React.Fragment>
-								<button className={`control-buttom controls__morecloud ${ moreclouds && 'control__erase-buttom' }`} onClick={ () => onSelectTypeOfCloud( 'moreclouds' ) }>☁️</button>
+								<button className={`control-buttom controls__morecloud ${ moreclouds ? 'control__erase-buttom' : '' }`} onClick={ () => onSelectTypeOfCloud( 'moreclouds' ) }>☁️</button>
 								<button className="control-buttom controls__cloud control__erase-buttom" onClick={ () => onSelectTypeOfCloud( 'noclouds' ) }>🌤</button>
-								<button className={`control-buttom controls__highcloud ${ clouds && 'control__erase-buttom' }`} onClick={ () => onSelectTypeOfCloud( 'clouds' ) }>⛅️</button>
+								<button className={`control-buttom controls__highcloud ${ clouds ? 'control__erase-buttom' : '' }`} onClick={ () => onSelectTypeOfCloud( 'clouds' ) }>⛅️</button>
 							</React.Fragment>
+						}
+						{ ( cloud === 'fewclouds' || cloud === 'clouds' || cloud === 'moreclouds' ) && rain !== 'heavyrain' &&
+							<button className={`control-buttom controls__rain ${ rain === 'rain' ? 'control__erase-buttom' : '' }`} onClick={ () => onChangeRain( 'rain' ) }>🌧</button>
+						}
+						{ ( cloud === 'moreclouds' || cloud === 'itrains' ) &&
+							<button className={`control-buttom controls__heavyrain ${ rain === 'heavyrain' ? 'control__erase-buttom' : '' }`} onClick={ () => onChangeRain( 'heavyrain' ) }>⛈</button>
 						}
 					</div>
 				</div>

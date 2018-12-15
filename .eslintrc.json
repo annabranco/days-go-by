@@ -41,7 +41,7 @@
     "no-func-assign"              : "error",
     "no-template-curly-in-string" : "warn",
     "block-scoped-var"            : "error",
-    "complexity"                  : ["error", 12],
+    "complexity"                  : ["error", 40],
     "curly"                       : ["error", "multi"],
     "default-case"                : ["error", { "commentPattern": "^skip\\sdefault" }],
     "dot-location"                : ["warn", "property"],

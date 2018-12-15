@@ -36,11 +36,31 @@ class App extends Component {
 	}
 
 	onChangeClouds = cloud => {
-		this.setState({ cloud });
+		if ( this.state.cloud === cloud ) {
+			switch ( this.state.cloud ) {
+			case 'noclouds':
+				this.setState({ cloud });
+				break;
+			case 'fewclouds':
+				this.setState({ cloud: 'noclouds' });
+				break;
+			default:
+				this.setState({ cloud: 'fewclouds' });
+				break;
+			}
+		} else this.setState({ cloud });
 	}
 
 	onChangeRain = rain => {
-		this.setState({ rain });
+		if ( this.state.rain === 'heavyrain' && rain === 'heavyrain' ) this.setState({
+			rain  : 'rain',
+			cloud : 'fewclouds',
+		});
+		else if ( this.state.rain === 'rain' && rain === 'rain' ) this.setState({ rain: 'norain' });
+		else if ( rain === 'heavyrain' ) this.setState({
+			rain,
+			cloud: 'itrains',
+		});
 	}
 
 	onTriggerFlower = () => {
@@ -52,13 +72,18 @@ class App extends Component {
 	}
 
 	onTriggerClouds = cloud => {
-		console.log( cloud );
 		if ( cloud === 'noclouds' ) this.setState({
 			clouds     : false,
 			moreclouds : false,
+			rain       : 'norain',
 		});
-		else if ( cloud === 'moreclouds' ) this.setState({ moreclouds: !this.state.moreclouds });
-		else if ( cloud === 'clouds' ) this.setState({ clouds: !this.state.clouds });
+		else if ( cloud === 'moreclouds' ) {
+			this.setState({ moreclouds: !this.state.moreclouds });
+			this.state.rain === 'heavyrain' && this.setState({ rain: 'rain' });
+		}	else if ( cloud === 'clouds' ) this.setState({
+			clouds : !this.state.clouds,
+			rain   : 'norain',
+		});
 	}
 
 	onTriggerSun = () => {
@@ -132,6 +157,7 @@ class App extends Component {
 					onChangeHoursSlider={ onChangeHoursSlider }
 					light={ light }
 					cloud={ cloud }
+					rain={ rain }
 					clouds = { clouds }
 					moreclouds = { moreclouds }
 					propsValues = { propsValues }
