@@ -20,7 +20,7 @@
 		transition : 8s ease;
 	}
 
-	&.cloud {
+	&.clouds, &.fewclouds {
 		transition : 8s ease;
 	}
 
@@ -57,7 +57,7 @@
 		filter : saturate(100%) brightness(100%) contrast(100%);
 	}
 
-	&.cloud {
+	&.clouds, &.fewclouds {
 		filter : saturate(100%) brightness(100%) contrast(100%);
 	}
 
@@ -75,7 +75,7 @@
 		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 166, 0, 0.4), rgba(255, 187, 0, 0.4), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3), rgba(30, 69, 247, 0.1));
 		background-color : rgb(35, 29, 63);
 
-		&.clouds {
+		&.clouds, &.fewclouds {
 			background-image : linear-gradient(to top, rgba(70, 80, 106, 1), rgba(33, 33, 40, 1));
 		}
 
@@ -91,7 +91,7 @@
 	&.hills {
 		filter : saturate(90%) brightness(70%) contrast(100%);
 
-		&.clouds {
+		&.clouds, &.fewclouds {
 			filter : saturate(80%) brightness(60%) contrast(100%);
 		}
 
@@ -107,7 +107,7 @@
 	&.grass {
 		filter : saturate(90%) brightness(80%) contrast(100%);
 
-		&.clouds {
+		&.clouds, &.fewclouds {
 			filter : saturate(90%) brightness(70%) contrast(100%);
 		}
 
@@ -123,7 +123,7 @@
 	&.flower {
 		filter : saturate(90%) brightness(80%) contrast(110%);
 
-		&.clouds {
+		&.clouds, &.fewclouds {
 			filter : saturate(90%) brightness(70%) contrast(110%);
 		}
 
@@ -136,10 +136,10 @@
 		}
 	}
 
-	&.cloud {
+	&.clouds, &.fewclouds {
 		filter : saturate(90%) brightness(80%) contrast(100%);
 
-		&.clouds {
+		&.clouds, &.fewclouds {
 			filter : saturate(90%) brightness(70%) contrast(120%);
 		}
 
@@ -155,7 +155,7 @@
 	&.clouds-high {
 		filter : saturate(90%) brightness(70%) contrast(100%);
 
-		&.clouds {
+		&.clouds, &.fewclouds {
 			filter : saturate(90%) brightness(60%) contrast(110%);
 		}
 
@@ -175,7 +175,7 @@
 		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3), rgba(30, 69, 247, 0.1));
 		background-color : rgb(36, 197, 237);
 
-		&.clouds {
+		&.clouds, &.fewclouds {
 			background-image : linear-gradient(to top, rgba(79, 109, 189, 1), rgba(80, 91, 115, 1));
 		}
 
@@ -192,7 +192,7 @@
 	&.sun {
 		filter : saturate(100%) brightness(100%) contrast(100%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(90%) brightness(80%) contrast(105%);
 		}
 
@@ -208,7 +208,7 @@
 	&.hills {
 		filter : saturate(100%) brightness(100%) contrast(150%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(90%) brightness(90%) contrast(100%);
 		}
 
@@ -224,7 +224,7 @@
 	&.grass {
 		filter : saturate(100%) brightness(100%) contrast(110%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(90%) brightness(90%) contrast(110%);
 		}
 
@@ -240,7 +240,7 @@
 	&.flower {
 		filter : saturate(100%) brightness(100%) contrast(110%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(90%) brightness(90%) contrast(110%);
 		}
 
@@ -256,7 +256,7 @@
 	&.cloud {
 		filter : saturate(100%) brightness(100%) contrast(110%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(100%) brightness(100%) contrast(110%);
 		}
 
@@ -272,7 +272,7 @@
 	&.clouds-high {
 		filter : saturate(100%) brightness(100%) contrast(100%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(90%) brightness(90%) contrast(120%);
 		}
 
@@ -288,7 +288,7 @@
 	&.rainbow {
 		opacity : 1;
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			opacity : 0.7;
 		}
 
@@ -307,7 +307,7 @@
 		background-image : linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(16, 36, 124, 0.3), rgba(14, 28, 90, 0.3));
 		background-color : rgb(40, 19, 54);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			background-image : linear-gradient(to top, rgba(70, 80, 106, 1), rgba(33, 33, 40, 1));
 		}
 
@@ -323,7 +323,7 @@
 	&.hills {
 		filter : saturate(90%) brightness(70%) contrast(100%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(80%) brightness(60%) contrast(100%);
 		}
 
@@ -339,7 +339,7 @@
 	&.grass {
 		filter : saturate(90%) brightness(80%) contrast(100%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(90%) brightness(70%) contrast(100%);
 		}
 
@@ -355,7 +355,7 @@
 	&.flower {
 		filter : saturate(90%) brightness(80%) contrast(110%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(90%) brightness(70%) contrast(110%);
 		}
 
@@ -371,7 +371,7 @@
 	&.cloud {
 		filter : saturate(90%) brightness(80%) contrast(100%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(90%) brightness(70%) contrast(120%);
 		}
 
@@ -387,7 +387,7 @@
 	&.clouds-high {
 		filter : saturate(90%) brightness(70%) contrast(100%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(90%) brightness(60%) contrast(110%);
 		}
 
@@ -407,7 +407,7 @@
 		background-color : black;
 		background-size  : 70%;
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			background-image : linear-gradient(to top, rgba(32, 26, 54, 0.85), rgba(22, 22, 22, 1)), url('./assets/images/stars.gif');
 			background-size  : 70%;
 		}
@@ -424,7 +424,7 @@
 	&.hills {
 		filter : saturate(90%) brightness(80%) contrast(100%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(50%) brightness(40%) contrast(100%);
 		}
 
@@ -440,7 +440,7 @@
 	&.grass {
 		filter : saturate(90%) brightness(60%) contrast(100%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(60%) brightness(40%) contrast(110%);
 		}
 
@@ -456,7 +456,7 @@
 	&.flower {
 		filter : saturate(70%) brightness(80%) contrast(100%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(60%) brightness(35%) contrast(90%);
 		}
 
@@ -472,7 +472,7 @@
 	&.cloud {
 		filter : saturate(80%) brightness(80%) contrast(100%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(60%) brightness(50%) contrast(90%);
 		}
 
@@ -488,7 +488,7 @@
 	&.clouds-high {
 		filter : saturate(90%) brightness(40%) contrast(100%);
 
-		&.clouds {
+	&.clouds, &.fewclouds {
 			filter : saturate(60%) brightness(30%) contrast(110%);
 		}
 

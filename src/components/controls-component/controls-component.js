@@ -21,8 +21,12 @@ class Controls extends React.Component {
 		onTriggerClouds     : PropTypes.func.isRequired,
 		onTriggerSun        :	PropTypes.func.isRequired,
 		onChangeHoursSlider : PropTypes.func.isRequired,
-		cloud               : PropTypes.oneOf([ 'noclouds', 'clouds', 'moreclouds', 'itrains' ]),
+		onSelectTypeOfCloud : PropTypes.func,
+		clouds              : PropTypes.bool.isRequired,
+		moreclouds          : PropTypes.bool.isRequired,
+		cloud               : PropTypes.oneOf([ 'noclouds', 'fewclouds', 'clouds', 'moreclouds', 'itrains' ]),
 		light               : PropTypes.oneOf([ 'neutral', 'morning', 'day', 'afternoon', 'night' ]),
+		rain                : PropTypes.oneOf([ 'norain', 'rain', 'heavyrain' ]),
 	};
 
 	componentDidMount() {
@@ -60,6 +64,16 @@ class Controls extends React.Component {
 		// }
 	}
 
+	onSelectTypeOfCloud = cloud => {
+		const {
+			onChangeClouds,
+			onTriggerClouds,
+		} = this.props;
+
+		onChangeClouds( cloud );
+		onTriggerClouds( cloud );
+	}
+
 	render() {
 
 		const {
@@ -72,9 +86,13 @@ class Controls extends React.Component {
 			onTriggerSun,
 			onChangeHoursSlider,
 			cloud,
+			clouds,
+			moreclouds,
+			rain,
 		} = this.props;
 
 		const { currentHour } = this.state;
+		const { onSelectTypeOfCloud } = this;
 
 		return (
 
@@ -102,21 +120,27 @@ class Controls extends React.Component {
 							onChange={ value => this.setState({ currentHour: value }) }
 							onAfterChange={ () => onChangeHoursSlider( currentHour )}
 						/>
-						{ cloud !== 'clouds' &&
-							<button className="control-buttom controls__cloud" onClick={ () => onChangeClouds( 'clouds' ) }>🌤</button>
+						{ cloud === 'noclouds' &&
+							<button className="control-buttom controls__cloud" onClick={ () => onChangeClouds( 'fewclouds' ) }>🌤</button>
 						}
-						{ cloud === 'clouds' &&
+						{ ( cloud === 'fewclouds' || cloud === 'clouds' || cloud === 'moreclouds' || cloud === 'itrains' ) &&
 							<React.Fragment>
-								<button className="control-buttom controls__morecloud" onClick={ () => onChangeClouds( 'clouds' ) }>☁️</button>
-								<button className="control-buttom controls__cloud control__erase-buttom" onClick={ () => onChangeClouds( 'noclouds' ) }>🌤</button>
-								<button className="control-buttom controls__highcloud" onClick={ () => onChangeClouds( 'clouds' ) }>⛅️</button>
+								<button className={`control-buttom controls__morecloud ${ moreclouds ? 'control__erase-buttom' : '' }`} onClick={ () => onSelectTypeOfCloud( 'moreclouds' ) }>☁️</button>
+								<button className="control-buttom controls__cloud control__erase-buttom" onClick={ () => onSelectTypeOfCloud( 'noclouds' ) }>🌤</button>
+								<button className={`control-buttom controls__highcloud ${ clouds ? 'control__erase-buttom' : '' }`} onClick={ () => onSelectTypeOfCloud( 'clouds' ) }>⛅️</button>
 							</React.Fragment>
+						}
+						{ ( cloud === 'fewclouds' || cloud === 'clouds' || cloud === 'moreclouds' ) && rain !== 'heavyrain' &&
+							<button className={`control-buttom controls__rain ${ rain === 'rain' ? 'control__erase-buttom' : '' }`} onClick={ () => onChangeRain( 'rain' ) }>🌧</button>
+						}
+						{ ( cloud === 'moreclouds' || cloud === 'itrains' ) &&
+							<button className={`control-buttom controls__heavyrain ${ rain === 'heavyrain' ? 'control__erase-buttom' : '' }`} onClick={ () => onChangeRain( 'heavyrain' ) }>⛈</button>
 						}
 					</div>
 				</div>
 				<div className="teste-console">
 
-					<p className="teste-title">Light Controls</p>
+					{/* <p className="teste-title">Light Controls</p>
 					<button className="teste-buttom" onClick={ () => onChangeLight( 'morning' ) }>morning</button>
 					<button className="teste-buttom" onClick={ () => onChangeLight( 'day' ) }>day</button>
 					<button className="teste-buttom" onClick={ () => onChangeLight( 'afternoon' ) }>afternoon</button>
@@ -133,9 +157,9 @@ class Controls extends React.Component {
 					<p className="teste-title">Atmosphere Controls</p>
 					<button className="teste-buttom" onClick={ () => onTriggerClouds( 'noclouds' ) }>noclouds</button>
 					<button className="teste-buttom" onClick={ () => onTriggerClouds( 'highclouds' ) }>highclouds</button>
-					<button className="teste-buttom" onClick={ () => onTriggerClouds( 'lowcloud' ) }>lowcloud</button>
+					<button className="teste-buttom" onClick={ () => onTriggerClouds( 'lowcloud' ) }>lowcloud</button> */}
 					<p className="teste-title">Events Controls</p>
-					<button className="teste-buttom" onClick={ () => onTriggerSun() }>sun</button>
+					{/* <button className="teste-buttom" onClick={ () => onTriggerSun() }>sun</button> */}
 					<button className="teste-buttom" onClick={ () => onTriggerFlower() }>flower</button>
 					<button className="teste-buttom" onClick={ () => onTriggerRainbow() }>rainbow</button>
 				</div>

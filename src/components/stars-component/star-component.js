@@ -26,7 +26,7 @@ class Stars extends React.Component {
 		positionX       : PropTypes.number,
 		positionY       : PropTypes.number,
 		light           : PropTypes.oneOf([ 'neutral', 'morning', 'day', 'afternoon', 'night' ]),
-		cloud           : PropTypes.oneOf([ 'noclouds', 'clouds', 'moreclouds', 'itrains' ]),
+		cloud           : PropTypes.oneOf([ 'noclouds', 'fewclouds', 'clouds', 'moreclouds', 'itrains' ]),
 		propsValues     : PropTypes.objectOf( PropTypes.arrayOf( PropTypes.string )),
 	};
 
