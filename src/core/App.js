@@ -18,15 +18,15 @@ class App extends Component {
 			rain       : 'norain',
 			flower     : false,
 			rainbow    : false,
-			lowcloud   : false,
-			highclouds : false,
+			clouds     : false,
+			moreclouds : false,
 			sun        : '',
 		};
 	}
 
 	propsValues = {
 		light : [ 'neutral', 'morning', 'day', 'afternoon', 'night' ],
-		cloud : [ 'noclouds', 'clouds', 'moreclouds', 'itrains' ],
+		cloud : [ 'noclouds', 'fewclouds', 'clouds', 'moreclouds', 'itrains' ],
 		rain  : [ 'norain', 'rain', 'heavyrain' ],
 		sun   : [ '', 'sunrise', 'sunset' ],
 	};
@@ -51,14 +51,14 @@ class App extends Component {
 		this.setState({ rainbow: !this.state.rainbow });
 	}
 
-	onTriggerClouds = clouds => {
-		console.log( clouds );
-		if ( clouds === 'noclouds' ) this.setState({
-			lowcloud   : false,
-			highclouds : false,
+	onTriggerClouds = cloud => {
+		console.log( cloud );
+		if ( cloud === 'noclouds' ) this.setState({
+			clouds     : false,
+			moreclouds : false,
 		});
-		else if ( clouds === 'highclouds' ) this.setState({ highclouds: !this.state.highclouds });
-		else if ( clouds === 'lowcloud' ) this.setState({ lowcloud: !this.state.lowcloud });
+		else if ( cloud === 'moreclouds' ) this.setState({ moreclouds: !this.state.moreclouds });
+		else if ( cloud === 'clouds' ) this.setState({ clouds: !this.state.clouds });
 	}
 
 	onTriggerSun = () => {
@@ -76,20 +76,20 @@ class App extends Component {
 			this.setState({ light: 'neutral' });
 			break;
 		case 6:
-			this.setState( { light: 'morning' } );
+			this.setState({ light: 'morning' });
 			break;
 		case 12:
-			this.setState( { light: 'day' } );
-			this.setState( { sun: 'sunrise' } );
+			this.setState({ light: 'day' });
+			this.setState({ sun: 'sunrise' });
 			break;
 		case 18:
-			this.setState( { light: 'afternoon' } );
-			this.setState( { sun: 'sunset' } );
+			this.setState({ light: 'afternoon' });
+			this.setState({ sun: 'sunset' });
 			break;
 		case 24:
 		case 0:
-			this.setState( { light: 'night' } );
-			this.setState( { sun: '' } );
+			this.setState({ light: 'night' });
+			this.setState({ sun: '' });
 
 			break;
 		}
@@ -102,8 +102,8 @@ class App extends Component {
 			rain,
 			flower,
 			rainbow,
-			lowcloud,
-			highclouds,
+			clouds,
+			moreclouds,
 			sun,
 		} = this.state;
 
@@ -132,6 +132,8 @@ class App extends Component {
 					onChangeHoursSlider={ onChangeHoursSlider }
 					light={ light }
 					cloud={ cloud }
+					clouds = { clouds }
+					moreclouds = { moreclouds }
 					propsValues = { propsValues }
 				/>
 				<Background
@@ -159,14 +161,14 @@ class App extends Component {
 						propsValues = { propsValues }
 					/>
 				}
-				{ lowcloud &&
+				{ clouds &&
 					<Cloud
 						light = { light }
 						cloud = { cloud }
 						propsValues = { propsValues }
 					/>
 				}
-				{ highclouds &&
+				{ moreclouds &&
 					<CloudsHigh
 						light = { light }
 						cloud = { cloud }

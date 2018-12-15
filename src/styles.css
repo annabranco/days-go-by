@@ -291,7 +291,7 @@ path {
 .neutral.flower, .morning.flower, .day.flower, .afternoon.flower, .night.flower {
   transition: 8s ease; }
 
-.neutral.cloud, .morning.cloud, .day.cloud, .afternoon.cloud, .night.cloud {
+.neutral.clouds, .neutral.fewclouds, .morning.clouds, .morning.fewclouds, .day.clouds, .day.fewclouds, .afternoon.clouds, .afternoon.fewclouds, .night.clouds, .night.fewclouds {
   transition: 8s ease; }
 
 .neutral.cloudsHigh, .morning.cloudsHigh, .day.cloudsHigh, .afternoon.cloudsHigh, .night.cloudsHigh {
@@ -317,7 +317,7 @@ path {
 .neutral.flower {
   filter: saturate(100%) brightness(100%) contrast(100%); }
 
-.neutral.cloud {
+.neutral.clouds, .neutral.fewclouds {
   filter: saturate(100%) brightness(100%) contrast(100%); }
 
 .neutral.cloudsHigh {
@@ -329,7 +329,7 @@ path {
 .morning.sky {
   background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 166, 0, 0.4), rgba(255, 187, 0, 0.4), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3), rgba(30, 69, 247, 0.1));
   background-color: #231d3f; }
-  .morning.sky.clouds {
+  .morning.sky.clouds, .morning.sky.fewclouds {
     background-image: linear-gradient(to top, #46506a, #212128); }
   .morning.sky.moreclouds {
     background-image: linear-gradient(to top, #46506a, #1f1f24); }
@@ -338,7 +338,7 @@ path {
 
 .morning.hills {
   filter: saturate(90%) brightness(70%) contrast(100%); }
-  .morning.hills.clouds {
+  .morning.hills.clouds, .morning.hills.fewclouds {
     filter: saturate(80%) brightness(60%) contrast(100%); }
   .morning.hills.moreclouds {
     filter: saturate(70%) brightness(50%) contrast(100%); }
@@ -347,7 +347,7 @@ path {
 
 .morning.grass {
   filter: saturate(90%) brightness(80%) contrast(100%); }
-  .morning.grass.clouds {
+  .morning.grass.clouds, .morning.grass.fewclouds {
     filter: saturate(90%) brightness(70%) contrast(100%); }
   .morning.grass.moreclouds {
     filter: saturate(80%) brightness(60%) contrast(100%); }
@@ -356,25 +356,25 @@ path {
 
 .morning.flower {
   filter: saturate(90%) brightness(80%) contrast(110%); }
-  .morning.flower.clouds {
+  .morning.flower.clouds, .morning.flower.fewclouds {
     filter: saturate(90%) brightness(70%) contrast(110%); }
   .morning.flower.moreclouds {
     filter: saturate(80%) brightness(60%) contrast(110%); }
   .morning.flower.itrains {
     filter: saturate(70%) brightness(50%) contrast(110%); }
 
-.morning.cloud {
+.morning.clouds, .morning.fewclouds {
   filter: saturate(90%) brightness(80%) contrast(100%); }
-  .morning.cloud.clouds {
+  .morning.clouds.clouds, .morning.clouds.fewclouds, .morning.fewclouds.clouds, .morning.fewclouds.fewclouds {
     filter: saturate(90%) brightness(70%) contrast(120%); }
-  .morning.cloud.moreclouds {
+  .morning.clouds.moreclouds, .morning.fewclouds.moreclouds {
     filter: saturate(80%) brightness(60%) contrast(130%); }
-  .morning.cloud.itrains {
+  .morning.clouds.itrains, .morning.fewclouds.itrains {
     filter: saturate(70%) brightness(40%) contrast(130%); }
 
 .morning.clouds-high {
   filter: saturate(90%) brightness(70%) contrast(100%); }
-  .morning.clouds-high.clouds {
+  .morning.clouds-high.clouds, .morning.clouds-high.fewclouds {
     filter: saturate(90%) brightness(60%) contrast(110%); }
   .morning.clouds-high.moreclouds {
     filter: saturate(80%) brightness(50%) contrast(130%); }
@@ -385,7 +385,7 @@ path {
   background-size: 100%;
   background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(14, 28, 90, 0.3), rgba(30, 69, 247, 0.1));
   background-color: #24c5ed; }
-  .day.sky.clouds {
+  .day.sky.clouds, .day.sky.fewclouds {
     background-image: linear-gradient(to top, #4f6dbd, #505b73); }
   .day.sky.moreclouds {
     background-image: linear-gradient(to top, #273c75, #353b48); }
@@ -395,7 +395,7 @@ path {
 
 .day.sun {
   filter: saturate(100%) brightness(100%) contrast(100%); }
-  .day.sun.clouds {
+  .day.sun.clouds, .day.sun.fewclouds {
     filter: saturate(90%) brightness(80%) contrast(105%); }
   .day.sun.moreclouds {
     filter: saturate(80%) brightness(60%) contrast(110%); }
@@ -404,7 +404,7 @@ path {
 
 .day.hills {
   filter: saturate(100%) brightness(100%) contrast(150%); }
-  .day.hills.clouds {
+  .day.hills.clouds, .day.hills.fewclouds {
     filter: saturate(90%) brightness(90%) contrast(100%); }
   .day.hills.moreclouds {
     filter: saturate(80%) brightness(80%) contrast(100%); }
@@ -413,7 +413,7 @@ path {
 
 .day.grass {
   filter: saturate(100%) brightness(100%) contrast(110%); }
-  .day.grass.clouds {
+  .day.grass.clouds, .day.grass.fewclouds {
     filter: saturate(90%) brightness(90%) contrast(110%); }
   .day.grass.moreclouds {
     filter: saturate(80%) brightness(80%) contrast(110%); }
@@ -422,7 +422,7 @@ path {
 
 .day.flower {
   filter: saturate(100%) brightness(100%) contrast(110%); }
-  .day.flower.clouds {
+  .day.flower.clouds, .day.flower.fewclouds {
     filter: saturate(90%) brightness(90%) contrast(110%); }
   .day.flower.moreclouds {
     filter: saturate(80%) brightness(80%) contrast(110%); }
@@ -431,7 +431,7 @@ path {
 
 .day.cloud {
   filter: saturate(100%) brightness(100%) contrast(110%); }
-  .day.cloud.clouds {
+  .day.cloud.clouds, .day.cloud.fewclouds {
     filter: saturate(100%) brightness(100%) contrast(110%); }
   .day.cloud.moreclouds {
     filter: saturate(80%) brightness(80%) contrast(110%); }
@@ -440,7 +440,7 @@ path {
 
 .day.clouds-high {
   filter: saturate(100%) brightness(100%) contrast(100%); }
-  .day.clouds-high.clouds {
+  .day.clouds-high.clouds, .day.clouds-high.fewclouds {
     filter: saturate(90%) brightness(90%) contrast(120%); }
   .day.clouds-high.moreclouds {
     filter: saturate(80%) brightness(70%) contrast(130%); }
@@ -449,7 +449,7 @@ path {
 
 .day.rainbow {
   opacity: 1; }
-  .day.rainbow.clouds {
+  .day.rainbow.clouds, .day.rainbow.fewclouds {
     opacity: 0.7; }
   .day.rainbow.moreclouds {
     opacity: 0.3; }
@@ -459,7 +459,7 @@ path {
 .afternoon.sky {
   background-image: linear-gradient(to top, rgba(255, 255, 0, 0.3), rgba(255, 187, 0, 0.2), rgba(255, 187, 0, 0.3), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(16, 36, 124, 0.3), rgba(14, 28, 90, 0.3));
   background-color: #281336; }
-  .afternoon.sky.clouds {
+  .afternoon.sky.clouds, .afternoon.sky.fewclouds {
     background-image: linear-gradient(to top, #46506a, #212128); }
   .afternoon.sky.moreclouds {
     background-image: linear-gradient(to top, #46506a, #1f1f24); }
@@ -468,7 +468,7 @@ path {
 
 .afternoon.hills {
   filter: saturate(90%) brightness(70%) contrast(100%); }
-  .afternoon.hills.clouds {
+  .afternoon.hills.clouds, .afternoon.hills.fewclouds {
     filter: saturate(80%) brightness(60%) contrast(100%); }
   .afternoon.hills.moreclouds {
     filter: saturate(70%) brightness(50%) contrast(100%); }
@@ -477,7 +477,7 @@ path {
 
 .afternoon.grass {
   filter: saturate(90%) brightness(80%) contrast(100%); }
-  .afternoon.grass.clouds {
+  .afternoon.grass.clouds, .afternoon.grass.fewclouds {
     filter: saturate(90%) brightness(70%) contrast(100%); }
   .afternoon.grass.moreclouds {
     filter: saturate(80%) brightness(60%) contrast(100%); }
@@ -486,7 +486,7 @@ path {
 
 .afternoon.flower {
   filter: saturate(90%) brightness(80%) contrast(110%); }
-  .afternoon.flower.clouds {
+  .afternoon.flower.clouds, .afternoon.flower.fewclouds {
     filter: saturate(90%) brightness(70%) contrast(110%); }
   .afternoon.flower.moreclouds {
     filter: saturate(80%) brightness(60%) contrast(110%); }
@@ -495,7 +495,7 @@ path {
 
 .afternoon.cloud {
   filter: saturate(90%) brightness(80%) contrast(100%); }
-  .afternoon.cloud.clouds {
+  .afternoon.cloud.clouds, .afternoon.cloud.fewclouds {
     filter: saturate(90%) brightness(70%) contrast(120%); }
   .afternoon.cloud.moreclouds {
     filter: saturate(80%) brightness(60%) contrast(130%); }
@@ -504,7 +504,7 @@ path {
 
 .afternoon.clouds-high {
   filter: saturate(90%) brightness(70%) contrast(100%); }
-  .afternoon.clouds-high.clouds {
+  .afternoon.clouds-high.clouds, .afternoon.clouds-high.fewclouds {
     filter: saturate(90%) brightness(60%) contrast(110%); }
   .afternoon.clouds-high.moreclouds {
     filter: saturate(80%) brightness(50%) contrast(130%); }
@@ -515,7 +515,7 @@ path {
   background-image: linear-gradient(to top, rgba(255, 255, 0, 0.1), rgba(255, 187, 0, 0.1), rgba(255, 187, 0, 0.2), rgba(2, 118, 175, 0.3), rgba(4, 35, 173, 0.3), rgba(16, 36, 124, 0.3), rgba(14, 28, 90, 0.3));
   background-color: black;
   background-size: 70%; }
-  .night.sky.clouds {
+  .night.sky.clouds, .night.sky.fewclouds {
     background-image: linear-gradient(to top, rgba(32, 26, 54, 0.85), #161616), url("./assets/images/stars.gif");
     background-size: 70%; }
   .night.sky.moreclouds {
@@ -525,7 +525,7 @@ path {
 
 .night.hills {
   filter: saturate(90%) brightness(80%) contrast(100%); }
-  .night.hills.clouds {
+  .night.hills.clouds, .night.hills.fewclouds {
     filter: saturate(50%) brightness(40%) contrast(100%); }
   .night.hills.moreclouds {
     filter: saturate(40%) brightness(20%) contrast(110%); }
@@ -534,7 +534,7 @@ path {
 
 .night.grass {
   filter: saturate(90%) brightness(60%) contrast(100%); }
-  .night.grass.clouds {
+  .night.grass.clouds, .night.grass.fewclouds {
     filter: saturate(60%) brightness(40%) contrast(110%); }
   .night.grass.moreclouds {
     filter: saturate(40%) brightness(20%) contrast(112%); }
@@ -543,7 +543,7 @@ path {
 
 .night.flower {
   filter: saturate(70%) brightness(80%) contrast(100%); }
-  .night.flower.clouds {
+  .night.flower.clouds, .night.flower.fewclouds {
     filter: saturate(60%) brightness(35%) contrast(90%); }
   .night.flower.moreclouds {
     filter: saturate(40%) brightness(10%) contrast(100%); }
@@ -552,7 +552,7 @@ path {
 
 .night.cloud {
   filter: saturate(80%) brightness(80%) contrast(100%); }
-  .night.cloud.clouds {
+  .night.cloud.clouds, .night.cloud.fewclouds {
     filter: saturate(60%) brightness(50%) contrast(90%); }
   .night.cloud.moreclouds {
     filter: saturate(40%) brightness(10%) contrast(100%); }
@@ -561,7 +561,7 @@ path {
 
 .night.clouds-high {
   filter: saturate(90%) brightness(40%) contrast(100%); }
-  .night.clouds-high.clouds {
+  .night.clouds-high.clouds, .night.clouds-high.fewclouds {
     filter: saturate(60%) brightness(30%) contrast(110%); }
   .night.clouds-high.moreclouds {
     filter: saturate(100%) brightness(20%) contrast(150%); }
