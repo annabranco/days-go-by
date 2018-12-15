@@ -8,10 +8,10 @@
 	max-width : 280px;
 	display   : none;
 
-	&.teste {
-		top       : 10%;
-		left      : 50%;
-		transform : translate(-50%, 0);
+	&.up {
+		top     : 10%;
+		left    : 25%;
+		display : block;
 	}
 
 	&.sunrise {

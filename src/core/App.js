@@ -28,7 +28,7 @@ class App extends Component {
 		light : [ 'neutral', 'morning', 'day', 'afternoon', 'night' ],
 		cloud : [ 'noclouds', 'fewclouds', 'clouds', 'moreclouds', 'itrains' ],
 		rain  : [ 'norain', 'rain', 'heavyrain' ],
-		sun   : [ '', 'sunrise', 'sunset' ],
+		sun   : [ '', 'sunrise', 'sunset', 'hidden', 'up' ],
 	};
 
 	onChangeLight = light => {
@@ -61,6 +61,7 @@ class App extends Component {
 			rain,
 			cloud: 'itrains',
 		});
+		else this.setState({ rain });
 	}
 
 	onTriggerFlower = () => {
@@ -80,6 +81,8 @@ class App extends Component {
 		else if ( cloud === 'moreclouds' ) {
 			this.setState({ moreclouds: !this.state.moreclouds });
 			this.state.rain === 'heavyrain' && this.setState({ rain: 'rain' });
+			( this.state.sun === 'sunrise' || this.state.sun === 'sunset' || this.state.sun === 'up' ) && this.setState({ sun: 'hidden' });
+			this.state.sun === 'hidden' && this.setState({ sun: 'up' });
 		}	else if ( cloud === 'clouds' ) this.setState({
 			clouds : !this.state.clouds,
 			rain   : 'norain',

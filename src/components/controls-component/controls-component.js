@@ -140,7 +140,7 @@ class Controls extends React.Component {
 				</div>
 				<div className="teste-console">
 
-					<p className="teste-title">Light Controls</p>
+					{/* <p className="teste-title">Light Controls</p>
 					<button className="teste-buttom" onClick={ () => onChangeLight( 'morning' ) }>morning</button>
 					<button className="teste-buttom" onClick={ () => onChangeLight( 'day' ) }>day</button>
 					<button className="teste-buttom" onClick={ () => onChangeLight( 'afternoon' ) }>afternoon</button>
@@ -157,9 +157,9 @@ class Controls extends React.Component {
 					<p className="teste-title">Atmosphere Controls</p>
 					<button className="teste-buttom" onClick={ () => onTriggerClouds( 'noclouds' ) }>noclouds</button>
 					<button className="teste-buttom" onClick={ () => onTriggerClouds( 'highclouds' ) }>highclouds</button>
-					<button className="teste-buttom" onClick={ () => onTriggerClouds( 'lowcloud' ) }>lowcloud</button>
+					<button className="teste-buttom" onClick={ () => onTriggerClouds( 'lowcloud' ) }>lowcloud</button> */}
 					<p className="teste-title">Events Controls</p>
-					<button className="teste-buttom" onClick={ () => onTriggerSun() }>sun</button>
+					{/* <button className="teste-buttom" onClick={ () => onTriggerSun() }>sun</button> */}
 					<button className="teste-buttom" onClick={ () => onTriggerFlower() }>flower</button>
 					<button className="teste-buttom" onClick={ () => onTriggerRainbow() }>rainbow</button>
 				</div>
